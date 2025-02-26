@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import logo from "@/assets/logo.png";
+import { UserButton } from "@clerk/nextjs";
 
 export default function Navbar() {
   return (
@@ -19,6 +20,7 @@ export default function Navbar() {
             AI Resume Builder
           </span>
         </Link>
+        <UserButton />
       </div>
     </header>
   );
