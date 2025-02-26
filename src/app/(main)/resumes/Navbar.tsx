@@ -29,7 +29,15 @@ export default function Navbar() {
               },
             },
           }}
-        > </UserButton>
+        >
+            <UserButton.MenuItems>
+            <UserButton.Link
+              label="Billing"
+              labelIcon={<CreditCard className="size-4" />}
+              href="/billing"
+            />
+          </UserButton.MenuItems>
+             </UserButton>
       </div>
     </header>
   );
