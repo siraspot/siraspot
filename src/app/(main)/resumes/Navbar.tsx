@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import logo from "@/assets/logo.png";
 import { UserButton } from "@clerk/nextjs";
+import { CreditCard } from "lucide-react";
 
 export default function Navbar() {
   return (
