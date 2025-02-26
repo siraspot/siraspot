@@ -24,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProbider>
+    <ClerkProvider>
 
     <html lang="en">
       <body
@@ -33,6 +33,6 @@ export default function RootLayout({
         {children}
       </body>
     </html>
-    </ClerkProbider>
+    </ClerkProvider>
   );
 }
