@@ -3,8 +3,8 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import logo from "@/assets/logo.png";
-import { UserButton } from "@clerk/nextjs";
 import { CreditCard } from "lucide-react";
+import { UserButton } from "@clerk/nextjs";
 
 export default function Navbar() {
   return (
