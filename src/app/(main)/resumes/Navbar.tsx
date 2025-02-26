@@ -20,7 +20,16 @@ export default function Navbar() {
             AI Resume Builder
           </span>
         </Link>
-        <UserButton />
+        <UserButton
+          appearance={{
+            elements: {
+              avatarBox: {
+                width: 35,
+                height: 35,
+              },
+            },
+          }}
+        > </UserButton>
       </div>
     </header>
   );
