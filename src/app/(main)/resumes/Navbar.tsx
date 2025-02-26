@@ -15,7 +15,7 @@ export default function Navbar() {
             height={35}
             className="rounded-full"
           />
-          <span className=""></span>
+          <span className="text-xl font-bold tracking-tight"></span>
         </Link>
       </div>
     </header>
