@@ -15,7 +15,9 @@ export default function Navbar() {
             height={35}
             className="rounded-full"
           />
-          <span className="text-xl font-bold tracking-tight"></span>
+          <span className="text-xl font-bold tracking-tight">
+            AI Resume Builder
+          </span>
         </Link>
       </div>
     </header>
