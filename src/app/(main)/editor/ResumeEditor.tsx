@@ -15,7 +15,9 @@ export default function ResumeEditor() {
       </header>
       <main className="relative grow">
         <div className="absolute bottom-0 top-0 flex w-full">
-            <div className="w-full md:w-1/2"></div>
+            <div className="w-full md:w-1/2">
+            left
+            </div>
         </div>
       </main>
       <footer className="w-full border-t px-3 py-5 text-center">
