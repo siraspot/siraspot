@@ -11,7 +11,9 @@ export default function ResumeEditor() {
           saved automatically.
         </p>
       </header>
-      <main></main>
+      <main>
+        main 
+      </main>
     </div>
   );
 }
