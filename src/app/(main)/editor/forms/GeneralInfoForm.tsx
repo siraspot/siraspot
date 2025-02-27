@@ -2,6 +2,7 @@ import { generalInfoSchema, GeneralInfoValues } from "@/lib/validation";
 import React from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { Form } from "@/components/ui/form";
 
 export default function GeneralInfoForm() {
   const form = useForm<GeneralInfoValues>({
@@ -21,6 +22,7 @@ export default function GeneralInfoForm() {
             This will not appear in your resume. It is for your reference only.
         </p>
       </div>
+      <Form {...form}></Form>
     </div>
   );
 }
