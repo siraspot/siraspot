@@ -13,5 +13,7 @@ export default function GeneralInfoForm() {
         // resumeData.description || "",
       },
   })
-  return <div className="max-w-xl mx-auto space-y-6">GeneralInfoForm</div>;
+  return <div className="max-w-xl mx-auto space-y-6">
+    <div className=""></div>
+  </div>;
 }
