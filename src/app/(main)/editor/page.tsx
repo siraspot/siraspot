@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import React from 'react'
+import ResumeEditor from './ResumeEditor'
 
 export const metadata: Metadata = {
     title: 'Design your resume',
@@ -8,6 +9,6 @@ export const metadata: Metadata = {
 
 export default function page() {
   return (
-    <div>page</div>
+    <ResumeEditor />
   )
 }
