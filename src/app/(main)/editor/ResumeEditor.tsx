@@ -23,7 +23,7 @@ export default function ResumeEditor() {
                 <Button>Next step</Button>
             </div>
             <div className="flex items-center gap-3">
-                <Button variant="secondary">
+                <Button variant="secondary" asChild>
                     <Link href="/resumes"></Link>
                 </Button>
             </div>
