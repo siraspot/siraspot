@@ -24,26 +24,25 @@ export default function Navbar() {
           </span>
         </Link>
         <div>
-
-        <ThemeToggle />
-        <UserButton
-          appearance={{
-            elements: {
-              avatarBox: {
-                width: 35,
-                height: 35,
+          <ThemeToggle />
+          <UserButton
+            appearance={{
+              elements: {
+                avatarBox: {
+                  width: 35,
+                  height: 35,
+                },
               },
-            },
-          }}
-        >
-          <UserButton.MenuItems>
-            <UserButton.Link
-              label="Billing"
-              labelIcon={<CreditCard className="size-4" />}
-              href="/billing"
-            />
-          </UserButton.MenuItems>
-        </UserButton>
+            }}
+          >
+            <UserButton.MenuItems>
+              <UserButton.Link
+                label="Billing"
+                labelIcon={<CreditCard className="size-4" />}
+                href="/billing"
+              />
+            </UserButton.MenuItems>
+          </UserButton>
         </div>
       </div>
     </header>
