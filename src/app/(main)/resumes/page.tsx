@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { PlusSquare } from "lucide-react";
 import { Metadata } from "next";
 import Link from "next/link";
 import React from "react";
@@ -13,6 +14,7 @@ export default function page() {
     <main className="mx-auto w-full max-w-7xl space-y-6 px-3 py-6">
       <Button>
         <Link href="/editor">
+          <PlusSquare className="w-6 h-6 mr-2" />
         </Link>
       </Button>
     </main>
