@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function page() {
   return (
     <main className="mx-auto w-full max-w-7xl space-y-6 px-3 py-6">
-      <Button>
+      <Button asChild>
         <Link href="/editor">
           <PlusSquare className="size-5" />
           <span>New Resume</span>
