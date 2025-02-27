@@ -2,11 +2,11 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { dark } from "@clerk/themes";
 import logo from "@/assets/logo.png";
 import { CreditCard } from "lucide-react";
 import { UserButton } from "@clerk/nextjs";
 import ThemeToggle from "@/components/ThemeToggle";
-import { dark } from "@clerk/themes";
 
 export default function Navbar() {
   return (
