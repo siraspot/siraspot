@@ -6,6 +6,7 @@ import logo from "@/assets/logo.png";
 import { CreditCard } from "lucide-react";
 import { UserButton } from "@clerk/nextjs";
 import ThemeToggle from "@/components/ThemeToggle";
+import { dark } from "@clerk/themes";
 
 export default function Navbar() {
   return (
