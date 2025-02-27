@@ -7,7 +7,7 @@ import { Button } from "./ui/button";
 import { Moon, Sun } from "lucide-react";
 
 export default function ThemeToggle() {
-  const { theme, setTheme } = useTheme();
+  const { setTheme } = useTheme();
   return (<DropdownMenu>
     <DropdownMenuTrigger asChild>
       <Button variant="ghost" size="icon">
