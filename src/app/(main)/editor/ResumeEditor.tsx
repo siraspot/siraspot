@@ -14,7 +14,9 @@ export default function ResumeEditor() {
       <main>
         main 
       </main>
-      <footer></footer>
+      <footer className="w-full border-t px-3 py-5 text-center">
+        <div></div>
+      </footer>
     </div>
   );
 }
