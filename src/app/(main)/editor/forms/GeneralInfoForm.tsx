@@ -5,7 +5,11 @@ import { zodResolver } from "@hookform/resolvers/zod";
 
 export default function GeneralInfoForm() {
   const form = useForm<GeneralInfoValues>({
-    resolver: ZodResolver(generalInfoSchema)
+    resolver: zodResolver(generalInfoSchema)
+    defaultValues: {
+        title: resumeData.title || "",
+        description: resumeData.description || "",
+      },
   })
   return <div>GeneralInfoForm</div>;
 }
