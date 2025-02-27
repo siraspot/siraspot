@@ -13,7 +13,9 @@ export default function ResumeEditor() {
           saved automatically.
         </p>
       </header>
-      <main className="relative grow">main</main>
+      <main className="relative grow">
+        <div className="absolute inset-0 flex items-center justify-center"></div>
+      </main>
       <footer className="w-full border-t px-3 py-5 text-center">
         <div className="max-w-7xl mx-auto flex flex-wrap justify-between gap-3">
           <div className="flex items-center gap-3">
