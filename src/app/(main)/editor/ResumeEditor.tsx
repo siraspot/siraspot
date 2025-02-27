@@ -25,7 +25,7 @@ export default function ResumeEditor() {
             <div className="flex items-center gap-3">
                 <Button variant="secondary" asChild>
                     <Link href="/resumes">
-                        Cancel
+                        Close
                     </Link>
                     <p>Saving...</p>
                 </Button>
