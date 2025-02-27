@@ -27,6 +27,7 @@ export default function ResumeEditor() {
                     <Link href="/resumes">
                         Cancel
                     </Link>
+                    <p>Saving...</p>
                 </Button>
             </div>
         </div>
