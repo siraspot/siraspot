@@ -26,8 +26,7 @@ export default function ResumeEditor() {
                 <Link href="/resumes">Close</Link>
                 
         <p className="text-sm text-muted-foreground">
-          Follow the steps below to create your resume. Your progress will be
-          saved automatically.
+            Saving...
         </p>
               </>
             </Button>
