@@ -23,7 +23,21 @@ export default function GeneralInfoForm() {
         </p>
       </div>
       <Form {...form}>
-        <form className="space-y-3"></form>
+        <form className="space-y-3">
+        <FormField
+            control={form.control}
+            name="title"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Project name</FormLabel>
+                <FormControl>
+                  <Input {...field} placeholder="My cool resume" autoFocus />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        </form>
       </Form>
     </div>
   );
