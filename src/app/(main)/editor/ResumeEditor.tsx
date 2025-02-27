@@ -14,7 +14,7 @@ export default function ResumeEditor() {
         </p>
       </header>
       <main className="relative grow">
-        <div className="absolute inset-0 flex items-center justify-center"></div>
+        <div className="absolute bottom-0 top-0 flex w-full"></div>
       </main>
       <footer className="w-full border-t px-3 py-5 text-center">
         <div className="max-w-7xl mx-auto flex flex-wrap justify-between gap-3">
