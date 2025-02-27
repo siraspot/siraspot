@@ -15,7 +15,7 @@ export default function ResumeEditor() {
         main 
       </main>
       <footer className="w-full border-t px-3 py-5 text-center">
-        <div className="max-w-7xl mx-auto flex flex-wrap"></div>
+        <div className="max-w-7xl mx-auto flex flex-wrap justify-between gap-3"></div>
       </footer>
     </div>
   );
