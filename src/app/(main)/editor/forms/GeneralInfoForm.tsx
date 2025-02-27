@@ -14,6 +14,6 @@ export default function GeneralInfoForm() {
       },
   })
   return <div className="max-w-xl mx-auto space-y-6">
-    <div className=""></div>
+    <div className="space-y-1.5 text-center"></div>
   </div>;
 }
