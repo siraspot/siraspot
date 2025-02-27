@@ -1,5 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import React from "react";
 
 export default function ResumeEditor() {
@@ -23,7 +24,7 @@ export default function ResumeEditor() {
             </div>
             <div className="flex items-center gap-3">
                 <Button variant="secondary">
-                    <Link></Link>
+                    <Link href="/resumes"></Link>
                 </Button>
             </div>
         </div>
