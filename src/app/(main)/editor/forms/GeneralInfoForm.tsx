@@ -22,7 +22,9 @@ export default function GeneralInfoForm() {
             This will not appear in your resume. It is for your reference only.
         </p>
       </div>
-      <Form {...form}></Form>
+      <Form {...form}>
+        <form className="space-y-3"></form>
+      </Form>
     </div>
   );
 }
