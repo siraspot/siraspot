@@ -1,11 +1,11 @@
-import { GeneralInfoValues } from "@/lib/validation";
+import { generalInfoSchema, GeneralInfoValues } from "@/lib/validation";
 import React from "react";
 import { useForm } from "react-hook-form";
-import { ZodReadonly } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
 
 export default function GeneralInfoForm() {
   const form = useForm<GeneralInfoValues>({
-    resolver: ZodReadonly
+    resolver: ZodResolver(generalInfoSchema)
   })
   return <div>GeneralInfoForm</div>;
 }
