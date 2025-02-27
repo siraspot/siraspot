@@ -2,7 +2,7 @@ import { generalInfoSchema, GeneralInfoValues } from "@/lib/validation";
 import React from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Form, FormField, FormItem } from "@/components/ui/form";
+import { Form, FormField, FormItem, FormLabel } from "@/components/ui/form";
 
 export default function GeneralInfoForm() {
   const form = useForm<GeneralInfoValues>({
