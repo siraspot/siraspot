@@ -7,6 +7,7 @@ import logo from "@/assets/logo.png";
 import { CreditCard } from "lucide-react";
 import { UserButton } from "@clerk/nextjs";
 import ThemeToggle from "@/components/ThemeToggle";
+import { useTheme } from "next-themes";
 
 export default function Navbar() {
   const { theme } = useTheme();
@@ -29,6 +30,7 @@ export default function Navbar() {
           <ThemeToggle />
           <UserButton
             appearance={{
+              baseTheme: theme === "dark" ? dark : undefined,
               elements: {
                 avatarBox: {
                   width: 35,
