@@ -27,7 +27,7 @@ export default function ResumeEditor() {
                     <Link href="/resumes">
                         Close
                     </Link>
-                    <p>Saving...</p>
+                    <p className="text-muted-foreground">Saving...</p>
                 </Button>
             </div>
         </div>
