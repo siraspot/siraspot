@@ -23,6 +23,8 @@ export default function Navbar() {
             AI Resume Builder
           </span>
         </Link>
+        <div>
+
         <ThemeToggle />
         <UserButton
           appearance={{
@@ -42,6 +44,7 @@ export default function Navbar() {
             />
           </UserButton.MenuItems>
         </UserButton>
+        </div>
       </div>
     </header>
   );
