@@ -19,7 +19,7 @@ export default function ResumeEditor() {
         <div className="max-w-7xl mx-auto flex flex-wrap justify-between gap-3">
             <div className="flex items-center gap-3">
                 <Button variant="secondary">Previous step</Button>
-                <Button variant="primary">Next step</Button>
+                <Button>Next step</Button>
             </div>
         </div>
       </footer>
