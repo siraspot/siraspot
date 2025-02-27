@@ -15,7 +15,7 @@ export default function page() {
       <Button>
         <Link href="/editor">
           <PlusSquare className="size-5" />
-          <span>Create a new resume</span>
+          <span>New resume</span>
         </Link>
       </Button>
     </main>
