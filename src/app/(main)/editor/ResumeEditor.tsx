@@ -21,6 +21,10 @@ export default function ResumeEditor() {
                 <Button variant="secondary">Previous step</Button>
                 <Button>Next step</Button>
             </div>
+            <div className="flex items-center gap-3">
+                <Button variant="secondary">Previous step</Button>
+                <Button>Next step</Button>
+            </div>
         </div>
       </footer>
     </div>
