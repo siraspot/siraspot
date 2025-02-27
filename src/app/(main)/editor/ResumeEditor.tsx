@@ -14,6 +14,7 @@ export default function ResumeEditor() {
       <main>
         main 
       </main>
+      <footer></footer>
     </div>
   );
 }
