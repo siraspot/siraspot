@@ -16,6 +16,7 @@ export default function ResumeEditor() {
       <main className="relative grow">
         <div className="absolute bottom-0 top-0 flex w-full">
           <div className="w-full md:w-1/2">left</div>
+          <div/>
           <div className="hidden w-1/2 md:flex">right</div>
         </div>
       </main>
