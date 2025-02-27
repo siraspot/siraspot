@@ -23,7 +23,7 @@ export default function Navbar() {
             AI Resume Builder
           </span>
         </Link>
-        <div>
+        <div className="flex items-center gap-3">
           <ThemeToggle />
           <UserButton
             appearance={{
