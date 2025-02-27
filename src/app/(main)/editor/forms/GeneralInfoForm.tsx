@@ -45,6 +45,22 @@ export default function GeneralInfoForm() {
               </FormItem>
             )}
           />
+          <FormField
+            control={form.control}
+            name="description"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Description</FormLabel>
+                <FormControl>
+                  <Input {...field} placeholder="A resume for my next job" />
+                </FormControl>
+                <FormDescription>
+                  Describe what this resume is for.
+                </FormDescription>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
         </form>
       </Form>
     </div>
