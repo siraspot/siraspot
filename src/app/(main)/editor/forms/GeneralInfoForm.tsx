@@ -1,9 +1,16 @@
-import { generalInfoSchema, GeneralInfoValues } from "@/lib/validation";
 import React from "react";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
 import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { generalInfoSchema, GeneralInfoValues } from "@/lib/validation";
 
 export default function GeneralInfoForm() {
   const form = useForm<GeneralInfoValues>({
@@ -20,12 +27,12 @@ export default function GeneralInfoForm() {
       <div className="space-y-1.5 text-center">
         <h2 className="text-2xl font-semibold">General Info</h2>
         <p className="text-sm text-muted-foreground">
-            This will not appear in your resume. It is for your reference only.
+          This will not appear in your resume. It is for your reference only.
         </p>
       </div>
       <Form {...form}>
         <form className="space-y-3">
-        <FormField
+          <FormField
             control={form.control}
             name="title"
             render={({ field }) => (
