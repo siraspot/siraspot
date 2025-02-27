@@ -2,6 +2,7 @@
 
 import React from "react";
 import { useTheme } from "next-themes";
+import { DropdownMenu, DropdownMenuTrigger } from "./ui/dropdown-menu";
 
 export default function ThemeToggle() {
   const { theme, setTheme } = useTheme();
