@@ -5,6 +5,7 @@ import Image from "next/image";
 import logo from "@/assets/logo.png";
 import { CreditCard } from "lucide-react";
 import { UserButton } from "@clerk/nextjs";
+import ThemeToggle from "@/components/ThemeToggle";
 
 export default function Navbar() {
   return (
@@ -22,6 +23,7 @@ export default function Navbar() {
             AI Resume Builder
           </span>
         </Link>
+        <ThemeToggle />
         <UserButton
           appearance={{
             elements: {
