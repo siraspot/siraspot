@@ -1,15 +1,21 @@
 "use client";
-// import { Button } from "@/components/ui/button";
-// import Link from "next/link";
+
 import React from "react";
 // import GeneralInfoForm from "./forms/GeneralInfoForm";
 // import PersonalInfoForm from "./forms/PersonalInfoForm";
 import { useSearchParams } from "next/navigation";
 import { steps } from "./steps";
 import Breadcrumbs from "./Breadcrumbs";
+import Footer from "./Footer";
 
 export default function ResumeEditor() {
   const searchParams = useSearchParams();
+
+  // const [showSmResumePreview, setShowSmResumePreview] = useState(false);
+
+  // const { isSaving, hasUnsavedChanges } = useAutoSaveResume(resumeData);
+
+  // useUnloadWarning(hasUnsavedChanges);
 
   const currentStep = searchParams.get("step") || steps[0].key;
 
@@ -49,6 +55,13 @@ export default function ResumeEditor() {
           <div className="hidden w-1/2 md:flex">right</div>
         </div>
       </main>
+      <Footer
+        currentStep={currentStep}
+        setCurrentStep={setStep}
+        // showSmResumePreview={showSmResumePreview}
+        // setShowSmResumePreview={setShowSmResumePreview}
+        // isSaving={isSaving}
+      />
     </div>
   );
 }
