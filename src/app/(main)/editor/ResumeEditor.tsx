@@ -7,9 +7,15 @@ import { useSearchParams } from "next/navigation";
 import { steps } from "./steps";
 import Breadcrumbs from "./Breadcrumbs";
 import Footer from "./Footer";
+import { ResumeValues } from "@/lib/validation";
 
 export default function ResumeEditor() {
   const searchParams = useSearchParams();
+
+  const [resumeData, setResumeData] = React.useState<ResumeValues>()
+  // (
+  //   resumeToEdit ? mapToResumeValues(resumeToEdit) : {},
+  // );
 
   // const [showSmResumePreview, setShowSmResumePreview] = useState(false);
 
