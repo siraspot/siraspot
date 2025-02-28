@@ -54,9 +54,11 @@ export default function PersinalInfoForm() {
                       type="file"
                       accept="image/*"
                       onChange={(e) => {
-                        const file = e.target.files?.[0];
-                        fieldValues.onChange(file);
-                      }}
+                          const file = e.target.files?.[0];
+                          fieldValues.onChange(file);
+                          console.log(file);                        
+                        }}
+                        // {...(value ? { value: console.log("yes", value)  } : {value: console.log("no")})}
                       //   ref={photoInputRef}
                     />
                   </FormControl>
