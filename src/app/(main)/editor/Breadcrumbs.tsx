@@ -11,22 +11,19 @@ import {
 
 interface BreadcrumbsProps {
   currentStep: string;
-  setCurrentStep: (step: string) => void;
+  setCurrentStep: (key: string) => void;
 }
 
-export default function Breadcrumbs({
-  currentStep,
-  setCurrentStep,
-}: BreadcrumbsProps) {
+export default function Breadcrumbs({ currentStep, setCurrentStep}: BreadcrumbsProps) {
   return (
-    <div className="flex justify-center">
+    <nav className="flex justify-center">
       <Breadcrumb>
         <BreadcrumbList>
           {steps.map((step) => (
             <React.Fragment key={step.key}>
               <BreadcrumbItem>
                 {step.key === currentStep ? (
-                  <BreadcrumbPage>hello{step.title}</BreadcrumbPage>
+                  <BreadcrumbPage>{step.title}</BreadcrumbPage>
                 ) : (
                   <BreadcrumbLink asChild>
                     <button onClick={() => setCurrentStep(step.key)}>
@@ -40,6 +37,6 @@ export default function Breadcrumbs({
           ))}
         </BreadcrumbList>
       </Breadcrumb>
-    </div>
+    </nav>
   );
 }

@@ -10,6 +10,7 @@ import { Breadcrumb } from "@/components/ui/breadcrumb";
 
 export default function ResumeEditor() {
   const searchParams = useSearchParams();
+
   const currentStep = searchParams.get("step") || steps[0].key;
 
   function setStep(key: string) {
@@ -33,13 +34,15 @@ export default function ResumeEditor() {
       </header>
       <main className="relative grow">
         <div className="absolute bottom-0 top-0 flex w-full">
-          <div className="w-full p-3 md:w-1/2 overflow-y-auto">
+          <div className="w-full p-3 md:w-1/2 space-y-6">
             <Breadcrumb currentStep={currentStep} setCurrentStep={setStep} />
             {FormComponent && (
-              <FormComponent
-                // resumeData={resumeData}
-                // setResumeData={setResumeData}
-              />
+              <>
+                <FormComponent
+                  // resumeData={resumeData}
+                  // setResumeData={setResumeData}
+                />
+              </>
             )}
           </div>
           <div className="grow md:border-r" />
