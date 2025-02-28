@@ -2,8 +2,8 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import React from "react";
-import GeneralInfoForm from "./forms/GeneralInfoForm";
-import PersinalInfoForm from "./forms/PersinalInfoForm";
+// import GeneralInfoForm from "./forms/GeneralInfoForm";
+import PersonalInfoForm from "./forms/PersonalInfoForm";
 
 export default function ResumeEditor() {
   return (
@@ -18,7 +18,7 @@ export default function ResumeEditor() {
       <main className="relative grow">
         <div className="absolute bottom-0 top-0 flex w-full">
           <div className="w-full p-3 md:w-1/2 overflow-y-auto">
-            <PersinalInfoForm />
+            <PersonalInfoForm />
           </div>
           <div className="grow md:border-r" />
           <div className="hidden w-1/2 md:flex">right</div>
