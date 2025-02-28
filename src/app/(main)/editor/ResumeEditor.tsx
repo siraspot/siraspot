@@ -1,12 +1,12 @@
 "use client";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
+// import { Button } from "@/components/ui/button";
+// import Link from "next/link";
 import React from "react";
 // import GeneralInfoForm from "./forms/GeneralInfoForm";
-import PersonalInfoForm from "./forms/PersonalInfoForm";
+// import PersonalInfoForm from "./forms/PersonalInfoForm";
 import { useSearchParams } from "next/navigation";
 import { steps } from "./steps";
-import { Breadcrumb } from "@/components/ui/breadcrumb";
+import Breadcrumbs from "./Breadcrumbs";
 
 export default function ResumeEditor() {
   const searchParams = useSearchParams();
@@ -35,12 +35,12 @@ export default function ResumeEditor() {
       <main className="relative grow">
         <div className="absolute bottom-0 top-0 flex w-full">
           <div className="w-full p-3 md:w-1/2 space-y-6">
-            <Breadcrumb currentStep={currentStep} setCurrentStep={setStep} />
+            <Breadcrumbs currentStep={currentStep} setCurrentStep={setStep} />
             {FormComponent && (
               <>
                 <FormComponent
-                  // resumeData={resumeData}
-                  // setResumeData={setResumeData}
+                // resumeData={resumeData}
+                // setResumeData={setResumeData}
                 />
               </>
             )}
@@ -49,23 +49,6 @@ export default function ResumeEditor() {
           <div className="hidden w-1/2 md:flex">right</div>
         </div>
       </main>
-      <footer className="w-full border-t px-3 py-5 text-center">
-        <div className="max-w-7xl mx-auto flex flex-wrap justify-between gap-3">
-          <div className="flex items-center gap-3">
-            <Button variant="secondary">Previous step</Button>
-            <Button>Next step</Button>
-          </div>
-          <div className="flex items-center gap-3">
-            <Button variant="secondary" asChild>
-              <>
-                <Link href="/resumes">Close</Link>
-
-                <p className="text-muted-foreground">Saving...</p>
-              </>
-            </Button>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }

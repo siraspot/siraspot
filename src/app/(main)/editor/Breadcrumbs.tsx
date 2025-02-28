@@ -11,12 +11,12 @@ import {
 
 interface BreadcrumbsProps {
   currentStep: string;
-  setCurrentStep: (key: string) => void;
+  setCurrentStep: (step: string) => void;
 }
 
 export default function Breadcrumbs({ currentStep, setCurrentStep}: BreadcrumbsProps) {
   return (
-    <nav className="flex justify-center">
+    <div className="flex justify-center">
       <Breadcrumb>
         <BreadcrumbList>
           {steps.map((step) => (
@@ -37,6 +37,6 @@ export default function Breadcrumbs({ currentStep, setCurrentStep}: BreadcrumbsP
           ))}
         </BreadcrumbList>
       </Breadcrumb>
-    </nav>
+    </div>
   );
 }
