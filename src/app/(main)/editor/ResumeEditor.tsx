@@ -4,8 +4,10 @@ import Link from "next/link";
 import React from "react";
 // import GeneralInfoForm from "./forms/GeneralInfoForm";
 import PersonalInfoForm from "./forms/PersonalInfoForm";
+import { useSearchParams } from "next/navigation";
 
 export default function ResumeEditor() {
+  const searchParams = useSearchParams();
   return (
     <div className="flex grow flex-col">
       <header className="space-y-1.5 border-b px-3 py-5 text-center">
