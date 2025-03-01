@@ -1,6 +1,11 @@
 import { EditorFormProps } from "@/lib/types";
 import { educationSchema, EducationValues } from "@/lib/validation";
-import { KeyboardSensor, PointerSensor, useSensor, useSensors } from "@dnd-kit/core";
+import {
+  KeyboardSensor,
+  PointerSensor,
+  useSensor,
+  useSensors,
+} from "@dnd-kit/core";
 import { sortableKeyboardCoordinates } from "@dnd-kit/sortable";
 import { zodResolver } from "@hookform/resolvers/zod";
 import React from "react";
@@ -38,7 +43,7 @@ export default function EducationForm({
     useSensor(PointerSensor),
     useSensor(KeyboardSensor, {
       coordinateGetter: sortableKeyboardCoordinates,
-    }),
+    })
   );
 
   function handleDragEnd(event: DragEndEvent) {
@@ -51,5 +56,14 @@ export default function EducationForm({
       return arrayMove(fields, oldIndex, newIndex);
     }
   }
-  return <div className="mx-auto max-w-xl space-y-6">EducationForm</div>;
+  return (
+    <div className="mx-auto max-w-xl space-y-6">
+      <div className="space-y-1.5 text-center">
+        <h2 className="text-2xl font-semibold">Education</h2>
+        <p className="text-sm text-muted-foreground">
+          Add as many educations as you like.
+        </p>
+      </div>
+    </div>
+  );
 }
