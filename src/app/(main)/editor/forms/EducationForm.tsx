@@ -1,16 +1,24 @@
 import { Button } from "@/components/ui/button";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { EditorFormProps } from "@/lib/types";
 import { cn } from "@/lib/utils";
 import { educationSchema, EducationValues } from "@/lib/validation";
 import {
+    DragEndEvent,
   KeyboardSensor,
   PointerSensor,
   useSensor,
   useSensors,
 } from "@dnd-kit/core";
-import { sortableKeyboardCoordinates } from "@dnd-kit/sortable";
+import { arrayMove, sortableKeyboardCoordinates, useSortable } from "@dnd-kit/sortable";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { GripHorizontal } from "lucide-react";
 import React from "react";
@@ -72,15 +80,15 @@ export default function EducationForm({
       </div>
       <Form {...form}>
         <form className="space-y-3">
-            {fields.map((field, index) => (
-              <EducationItem
-                id={field.id}
-                key={field.id}
-                index={index}
-                form={form}
-                remove={remove}
-              />
-            ))}
+          {fields.map((field, index) => (
+            <EducationItem
+              id={field.id}
+              key={field.id}
+              index={index}
+              form={form}
+              remove={remove}
+            />
+          ))}
           {/* <DndContext
             sensors={sensors}
             collisionDetection={closestCenter}
