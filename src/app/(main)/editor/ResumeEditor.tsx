@@ -12,7 +12,7 @@ import { ResumeValues } from "@/lib/validation";
 export default function ResumeEditor() {
   const searchParams = useSearchParams();
 
-  const [resumeData, setResumeData] = React.useState<ResumeValues>()
+  const [resumeData, setResumeData] = React.useState<ResumeValues>({})
   // (
   //   resumeToEdit ? mapToResumeValues(resumeToEdit) : {},
   // );
@@ -51,14 +51,16 @@ export default function ResumeEditor() {
             {FormComponent && (
               <>
                 <FormComponent
-                // resumeData={resumeData}
-                // setResumeData={setResumeData}
+                resumeData={resumeData}
+                setResumeData={setResumeData}
                 />
               </>
             )}
           </div>
           <div className="grow md:border-r" />
-          <div className="hidden w-1/2 md:flex">right</div>
+          <div className="hidden w-1/2 md:flex">
+            <pre>{JSON.stringify(resumeData, null, 2)}</pre>
+          </div>
         </div>
       </main>
       <Footer

@@ -12,42 +12,35 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { EditorFormProps } from "@/lib/types";
 
-export default function PersonalInfoForm() {
+export default function PersonalInfoForm({
+  resumeData,
+  setResumeData,
+}: EditorFormProps) {
   const form = useForm<PersonalInfoValues>({
     resolver: zodResolver(personalInfoSchema),
     defaultValues: {
-      firstName: "",
-      //   resumeData.firstName || "",
-      lastName: "",
-      //   resumeData.lastName || "",
-      jobTitle: "",
-      //   resumeData.jobTitle || "",
-      city: "",
-      //   resumeData.city || "",
-      country: "",
-      //   resumeData.country || "",
-      phone: "",
-      //   resumeData.phone || "",
-      email: "",
-      //   resumeData.email || "",
+      firstName: resumeData.firstName || "",
+      lastName: resumeData.lastName || "",
+      jobTitle: resumeData.jobTitle || "",
+      city: resumeData.city || "",
+      country: resumeData.country || "",
+      phone: resumeData.phone || "",
+      email: resumeData.email || "",
     },
   });
 
   React.useEffect(() => {
-    const { unsubscribe } = form.watch(async () =>
-      // values
+    const { unsubscribe } = form.watch(async (values) =>
       {
         const isValid = await form.trigger();
         if (!isValid) return;
-        //   setResumeData({ ...resumeData, ...values });
+        setResumeData({ ...resumeData, ...values });
       }
     );
     return unsubscribe;
-  }, [
-    form,
-    // , resumeData, setResumeData
-  ]);
+  }, [form, , resumeData, setResumeData]);
   return (
     <div className="mx-auto max-w-xl space-y-6">
       <div className="space-y-1.5 text-center">
