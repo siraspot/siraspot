@@ -191,7 +191,7 @@ function WorkExperienceItem({
           </FormItem>
         )}
       />
-      {/* <FormField
+      <FormField
         control={form.control}
         name={`workExperiences.${index}.company`}
         render={({ field }) => (
@@ -203,7 +203,7 @@ function WorkExperienceItem({
             <FormMessage />
           </FormItem>
         )}
-      /> */}
+      />
       {/* <div className="grid grid-cols-2 gap-3">
         <FormField
           control={form.control}
