@@ -49,5 +49,23 @@ export default function WorkExperienceForm({
     },
   });
 
+  React.useEffect(() => {
+    const { unsubscribe } = form.watch(async (values) => {
+      const isValid = await form.trigger();
+      if (!isValid) return;
+      setResumeData({
+        ...resumeData,
+        workExperiences:
+          values.workExperiences?.filter((exp) => exp !== undefined) || [],
+      });
+    });
+    return unsubscribe;
+  }, [form, resumeData, setResumeData]);
+
+  const { fields, append, remove, move } = useFieldArray({
+    control: form.control,
+    name: "workExperiences",
+  });
+
   return <div>WorkExperienceForm</div>;
 }
