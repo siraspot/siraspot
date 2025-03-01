@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -39,10 +39,15 @@ import { useFieldArray, useForm, UseFormReturn } from "react-hook-form";
 import GenerateWorkExperienceButton from "./GenerateWorkExperienceButton";
 
 export default function WorkExperienceForm({
-    resumeData,
-    setResumeData,
-  }: EditorFormProps) {
-  return (
-    <div>WorkExperienceForm</div>
-  )
+  resumeData,
+  setResumeData,
+}: EditorFormProps) {
+  const form = useForm<WorkExperienceValues>({
+    resolver: zodResolver(workExperienceSchema),
+    defaultValues: {
+      workExperiences: resumeData.workExperiences || [],
+    },
+  });
+
+  return <div>WorkExperienceForm</div>;
 }
