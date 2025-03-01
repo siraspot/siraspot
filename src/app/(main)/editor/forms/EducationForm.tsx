@@ -14,5 +14,22 @@ export default function EducationForm({
       educations: resumeData.educations || [],
     },
   });
+
+  React.useEffect(() => {
+    const { unsubscribe } = form.watch(async (values) => {
+      const isValid = await form.trigger();
+      if (!isValid) return;
+      setResumeData({
+        ...resumeData,
+        educations: values.educations?.filter((edu) => edu !== undefined) || [],
+      });
+    });
+    return unsubscribe;
+  }, [form, resumeData, setResumeData]);
+
+  const { fields, append, remove, move } = useFieldArray({
+    control: form.control,
+    name: "educations",
+  });
   return <div>EducationForm</div>;
 }
