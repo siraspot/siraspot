@@ -65,10 +65,10 @@ export default function ResumeEditor() {
       </main>
       <Footer
         currentStep={currentStep}
-        setCurrentStep={setStep}
         // showSmResumePreview={showSmResumePreview}
         // setShowSmResumePreview={setShowSmResumePreview}
         // isSaving={isSaving}
+        setCurrentStep={setStep}
       />
     </div>
   );
