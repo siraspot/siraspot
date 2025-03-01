@@ -204,7 +204,7 @@ function WorkExperienceItem({
           </FormItem>
         )}
       />
-      {/* <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-2 gap-3">
         <FormField
           control={form.control}
           name={`workExperiences.${index}.startDate`}
@@ -239,11 +239,12 @@ function WorkExperienceItem({
             </FormItem>
           )}
         />
-      </div> */}
-      {/* <FormDescription>
+      </div>
+      <FormDescription>
         Leave <span className="font-semibold">end date</span> empty if you are
         currently working here.
       </FormDescription>
+      
       <FormField
         control={form.control}
         name={`workExperiences.${index}.description`}
@@ -256,7 +257,7 @@ function WorkExperienceItem({
             <FormMessage />
           </FormItem>
         )}
-      /> */}
+      />
       <Button variant="destructive" type="button" onClick={() => remove(index)}>
         Remove
       </Button>

@@ -8,16 +8,17 @@ import { steps } from "./steps";
 import Breadcrumbs from "./Breadcrumbs";
 import Footer from "./Footer";
 import { ResumeValues } from "@/lib/validation";
+import { cn } from "@/lib/utils";
 
 export default function ResumeEditor() {
   const searchParams = useSearchParams();
 
-  const [resumeData, setResumeData] = React.useState<ResumeValues>({})
+  const [resumeData, setResumeData] = React.useState<ResumeValues>({});
   // (
   //   resumeToEdit ? mapToResumeValues(resumeToEdit) : {},
   // );
 
-  // const [showSmResumePreview, setShowSmResumePreview] = useState(false);
+  const [showSmResumePreview, setShowSmResumePreview] = React.useState(false);
 
   // const { isSaving, hasUnsavedChanges } = useAutoSaveResume(resumeData);
 
@@ -46,13 +47,18 @@ export default function ResumeEditor() {
       </header>
       <main className="relative grow">
         <div className="absolute bottom-0 top-0 flex w-full">
-          <div className="w-full p-3 md:w-1/2 space-y-6">
+          <div
+            className={cn(
+              "w-full space-y-6 overflow-y-auto p-3 md:block md:w-1/2",
+              showSmResumePreview && "hidden"
+            )}
+          >
             <Breadcrumbs currentStep={currentStep} setCurrentStep={setStep} />
             {FormComponent && (
               <>
                 <FormComponent
-                resumeData={resumeData}
-                setResumeData={setResumeData}
+                  resumeData={resumeData}
+                  setResumeData={setResumeData}
                 />
               </>
             )}
