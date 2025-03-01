@@ -69,7 +69,12 @@ export default function WorkExperienceForm({
 
   return (
     <div className="mx-auto max-w-xl space-y-6">
-      <div className="space-y-1.5 text-center"></div>
+      <div className="space-y-1.5 text-center">
+        <h2 className="text-2xl font-semibold">Work experience</h2>
+        <p className="text-sm text-muted-foreground">
+          Add as many work experiences as you like.
+        </p>
+      </div>
     </div>
   );
 }
