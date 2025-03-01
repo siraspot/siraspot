@@ -40,5 +40,16 @@ export default function EducationForm({
       coordinateGetter: sortableKeyboardCoordinates,
     }),
   );
+
+  function handleDragEnd(event: DragEndEvent) {
+    const { active, over } = event;
+
+    if (over && active.id !== over.id) {
+      const oldIndex = fields.findIndex((field) => field.id === active.id);
+      const newIndex = fields.findIndex((field) => field.id === over.id);
+      move(oldIndex, newIndex);
+      return arrayMove(fields, oldIndex, newIndex);
+    }
+  }
   return <div>EducationForm</div>;
 }
