@@ -51,5 +51,5 @@ export default function EducationForm({
       return arrayMove(fields, oldIndex, newIndex);
     }
   }
-  return <div>EducationForm</div>;
+  return <div className="mx-auto max-w-xl space-y-6">EducationForm</div>;
 }
