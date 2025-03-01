@@ -67,5 +67,9 @@ export default function WorkExperienceForm({
     name: "workExperiences",
   });
 
-  return <div className="mx-auto max-w-xl space-y-6">WorkExperienceForm</div>;
+  return (
+    <div className="mx-auto max-w-xl space-y-6">
+      <div className="space-y-1.5 text-center"></div>
+    </div>
+  );
 }
