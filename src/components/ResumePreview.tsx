@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { BorderStyles } from "@/app/(main)/editor/BorderStyleButton";
 import useDimensions from "@/hooks/useDimensions";
 import { cn } from "@/lib/utils";
@@ -17,15 +17,12 @@ export default function ResumePreview({
   resumeData,
   className,
 }: ResumePreviewProps) {
-    const containerRef = useRef<HTMLDivElement>(null);
-  
-    const { width } = useDimensions(containerRef);
-  return (
-    <div>ResumePreview</div>
-  )
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  const { width } = useDimensions(containerRef);
+  return <div>ResumePreview</div>;
 }
 
 interface ResumeSectionProps {
-    resumeData: ResumeValues;
-  }
-  
+  resumeData: ResumeValues;
+}
