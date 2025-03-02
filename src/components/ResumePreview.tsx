@@ -24,3 +24,8 @@ export default function ResumePreview({
     <div>ResumePreview</div>
   )
 }
+
+interface ResumeSectionProps {
+    resumeData: ResumeValues;
+  }
+  
