@@ -41,6 +41,26 @@ export default function SummaryForm({
           from your entered data.
         </p>
       </div>
+      <Form {...form}>
+        <form className="space-y-3">
+          <FormField
+            control={form.control}
+            name="summary"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="sr-only">Professional summary</FormLabel>
+                <FormControl>
+                  <Textarea
+                    {...field}
+                    placeholder="A brief, engaging text about yourself"
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        </form>
+      </Form>
     </div>
   );
 }
