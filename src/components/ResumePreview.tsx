@@ -34,6 +34,7 @@ export default function ResumePreview({
         }}
       >
         <pre>{JSON.stringify(resumeData, null, 2)}</pre>
+        <PersonalInfoHeader resumeData={resumeData} />
       </div>
     </div>
   );
