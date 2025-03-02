@@ -38,7 +38,7 @@ export default function ResumePreview({
         {/* <h1 className="p-6 text-3xl font-bold">
           This text should change with the size of the container div
         </h1> */}
-        <pre>{JSON.stringify(resumeData, null, 2)}</pre>
+        {/* <pre>{JSON.stringify(resumeData, null, 2)}</pre> */}
         <PersonalInfoHeader resumeData={resumeData} />
         <SummarySection resumeData={resumeData} />
         <WorkExperienceSection resumeData={resumeData} />
