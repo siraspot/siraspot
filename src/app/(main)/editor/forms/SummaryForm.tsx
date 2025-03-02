@@ -23,6 +23,15 @@ import {
         summary: resumeData.summary || "",
       },
     });
+
+    React.useEffect(() => {
+        const { unsubscribe } = form.watch(async (values) => {
+          const isValid = await form.trigger();
+          if (!isValid) return;
+          setResumeData({ ...resumeData, ...values });
+        });
+        return unsubscribe;
+      }, [form, resumeData, setResumeData]);
   return (
     <div>SummaryForm</div>
   )
