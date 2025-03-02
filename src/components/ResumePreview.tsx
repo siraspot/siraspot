@@ -8,7 +8,18 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { Badge } from "./ui/badge";
 
-export default function ResumePreview() {
+interface ResumePreviewProps {
+  resumeData: ResumeValues;
+  className?: string;
+}
+
+export default function ResumePreview({
+  resumeData,
+  className,
+}: ResumePreviewProps) {
+    const containerRef = useRef<HTMLDivElement>(null);
+  
+    const { width } = useDimensions(containerRef);
   return (
     <div>ResumePreview</div>
   )
