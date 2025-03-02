@@ -17,6 +17,12 @@ import {
     resumeData,
     setResumeData,
   }: EditorFormProps) {
+    const form = useForm<SummaryValues>({
+      resolver: zodResolver(summarySchema),
+      defaultValues: {
+        summary: resumeData.summary || "",
+      },
+    });
   return (
     <div>SummaryForm</div>
   )
