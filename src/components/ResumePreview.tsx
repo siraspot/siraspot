@@ -19,20 +19,24 @@ export default function ResumePreview({
   const containerRef = React.useRef<HTMLDivElement>(null);
 
   const { width } = useDimensions(containerRef);
-  return <div
-  className={cn(
-    "aspect-[210/297] h-fit w-full bg-white text-black",
-    className,
-  )}
-  ref={containerRef}
->
-<div
+  return (
+    <div
+      className={cn(
+        "aspect-[210/297] h-fit w-full bg-white text-black",
+        className
+      )}
+      ref={containerRef}
+    >
+      <div
         className={cn("space-y-6 p-6", !width && "invisible")}
         style={{
           zoom: (1 / 794) * width,
         }}
-      ></div>
-</div>;
+      >
+        <pre>{JSON.stringify(resumeData, null, 2)}</pre>
+      </div>
+    </div>
+  );
 }
 
 interface ResumeSectionProps {
@@ -53,7 +57,9 @@ function PersonalInfoHeader({ resumeData }: ResumeSectionProps) {
     borderStyle,
   } = resumeData;
 
-  const [photoSrc, setPhotoSrc] = React.useState(photo instanceof File ? "" : photo);
+  const [photoSrc, setPhotoSrc] = React.useState(
+    photo instanceof File ? "" : photo
+  );
 
   React.useEffect(() => {
     const objectUrl = photo instanceof File ? URL.createObjectURL(photo) : "";
