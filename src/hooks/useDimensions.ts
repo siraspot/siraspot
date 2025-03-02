@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 export default function useDimensions(
   containerRef: React.RefObject<HTMLElement>,
 ) {
-  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
+  const [dimensions, setDimensions] = React.useState({ width: 0, height: 0 });
 
-  useEffect(() => {
+  React.useEffect(() => {
     const currentRef = containerRef.current;
 
     function getDimensions() {
