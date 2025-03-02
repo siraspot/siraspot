@@ -5,7 +5,6 @@ import { cn } from "@/lib/utils";
 import { ResumeValues } from "@/lib/validation";
 import { formatDate } from "date-fns";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
 import { Badge } from "./ui/badge";
 
 interface ResumePreviewProps {
@@ -17,10 +16,23 @@ export default function ResumePreview({
   resumeData,
   className,
 }: ResumePreviewProps) {
-  const containerRef = useRef<HTMLDivElement>(null);
+  const containerRef = React.useRef<HTMLDivElement>(null);
 
   const { width } = useDimensions(containerRef);
-  return <div>ResumePreview</div>;
+  return <div
+  className={cn(
+    "aspect-[210/297] h-fit w-full bg-white text-black",
+    className,
+  )}
+  ref={containerRef}
+>
+<div
+        className={cn("space-y-6 p-6", !width && "invisible")}
+        style={{
+          zoom: (1 / 794) * width,
+        }}
+      ></div>
+</div>;
 }
 
 interface ResumeSectionProps {
@@ -41,9 +53,9 @@ function PersonalInfoHeader({ resumeData }: ResumeSectionProps) {
     borderStyle,
   } = resumeData;
 
-  const [photoSrc, setPhotoSrc] = useState(photo instanceof File ? "" : photo);
+  const [photoSrc, setPhotoSrc] = React.useState(photo instanceof File ? "" : photo);
 
-  useEffect(() => {
+  React.useEffect(() => {
     const objectUrl = photo instanceof File ? URL.createObjectURL(photo) : "";
     if (objectUrl) setPhotoSrc(objectUrl);
     if (photo === null) setPhotoSrc("");
