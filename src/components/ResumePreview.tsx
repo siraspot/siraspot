@@ -1,6 +1,6 @@
 import React from "react";
-import { BorderStyles } from "@/app/(main)/editor/BorderStyleButton";
-import useDimensions from "@/hooks/useDimensions";
+// import { BorderStyles } from "@/app/(main)/editor/BorderStyleButton";
+// import useDimensions from "@/hooks/useDimensions";
 import { cn } from "@/lib/utils";
 import { ResumeValues } from "@/lib/validation";
 import { formatDate } from "date-fns";
@@ -18,7 +18,7 @@ export default function ResumePreview({
 }: ResumePreviewProps) {
   const containerRef = React.useRef<HTMLDivElement>(null);
 
-  const { width } = useDimensions(containerRef);
+//   const { width } = useDimensions(containerRef);
   return (
     <div
       className={cn(
@@ -28,10 +28,12 @@ export default function ResumePreview({
       ref={containerRef}
     >
       <div
-        className={cn("space-y-6 p-6", !width && "invisible")}
-        style={{
-          zoom: (1 / 794) * width,
-        }}
+        className={cn("space-y-6 p-6"
+            // , !width && "invisible"
+        )}
+        // style={{
+        //   zoom: (1 / 794) * width,
+        // }}
       >
         <pre>{JSON.stringify(resumeData, null, 2)}</pre>
         <PersonalInfoHeader resumeData={resumeData} />
@@ -82,14 +84,14 @@ function PersonalInfoHeader({ resumeData }: ResumeSectionProps) {
           height={100}
           alt="Author photo"
           className="aspect-square object-cover"
-          style={{
-            borderRadius:
-              borderStyle === BorderStyles.SQUARE
-                ? "0px"
-                : borderStyle === BorderStyles.CIRCLE
-                  ? "9999px"
-                  : "10%",
-          }}
+        //   style={{
+        //     borderRadius:
+        //       borderStyle === BorderStyles.SQUARE
+        //         ? "0px"
+        //         : borderStyle === BorderStyles.CIRCLE
+        //           ? "9999px"
+        //           : "10%",
+        //   }}
         />
       )}
       <div className="space-y-2.5">
