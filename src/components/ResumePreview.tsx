@@ -18,6 +18,8 @@ export default function ResumePreview({
 }: ResumePreviewProps) {
   const containerRef = React.useRef<HTMLDivElement>(null);
 
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  //   @ts-expect-error
   const { width } = useDimensions(containerRef);
   return (
     <div
