@@ -11,6 +11,10 @@ interface ResumePreviewSectionProps {
   className?: string;
 }
 
-export default function ResumePreviewSection() {
+export default function ResumePreviewSection({
+  resumeData,
+  setResumeData,
+  className,
+}: ResumePreviewSectionProps) {
   return <div>ResumePreviewSection</div>;
 }
