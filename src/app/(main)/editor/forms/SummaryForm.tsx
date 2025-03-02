@@ -32,12 +32,15 @@ export default function SummaryForm({
     });
     return unsubscribe;
   }, [form, resumeData, setResumeData]);
-  return <div className="mx-auto max-w-xl space-y-6">
-  <div className="space-y-1.5 text-center">
-    <h2 className="text-2xl font-semibold">Professional summary</h2>
-    <p className="text-sm text-muted-foreground">
-      Write a short introduction for your resume or let the AI generate one
-      from your entered data.
-    </p>
-  </div></div>;
+  return (
+    <div className="mx-auto max-w-xl space-y-6">
+      <div className="space-y-1.5 text-center">
+        <h2 className="text-2xl font-semibold">Professional summary</h2>
+        <p className="text-sm text-muted-foreground">
+          Write a short introduction for your resume or let the AI generate one
+          from your entered data.
+        </p>
+      </div>
+    </div>
+  );
 }
