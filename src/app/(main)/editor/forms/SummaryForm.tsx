@@ -32,5 +32,5 @@ export default function SummaryForm({
     });
     return unsubscribe;
   }, [form, resumeData, setResumeData]);
-  return <div>SummaryForm</div>;
+  return <div className="mx-auto max-w-xl space-y-6">SummaryForm</div>;
 }
