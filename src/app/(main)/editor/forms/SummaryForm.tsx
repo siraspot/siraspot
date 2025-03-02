@@ -13,7 +13,10 @@ import {
   import { zodResolver } from "@hookform/resolvers/zod";
   import { useForm } from "react-hook-form";
 
-export default function SummaryForm() {
+  export default function SummaryForm({
+    resumeData,
+    setResumeData,
+  }: EditorFormProps) {
   return (
     <div>SummaryForm</div>
   )
