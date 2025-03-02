@@ -5,6 +5,12 @@ import { ResumeValues } from "@/lib/validation";
 import BorderStyleButton from "./BorderStyleButton";
 import ColorPicker from "./ColorPicker";
 
+interface ResumePreviewSectionProps {
+  resumeData: ResumeValues;
+  setResumeData: (data: ResumeValues) => void;
+  className?: string;
+}
+
 export default function ResumePreviewSection() {
   return <div>ResumePreviewSection</div>;
 }
