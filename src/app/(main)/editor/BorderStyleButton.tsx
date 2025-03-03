@@ -24,5 +24,12 @@ export default function BorderStyleButton({
     const nextIndex = (currentIndex + 1) % borderStyles.length;
     onChange(borderStyles[nextIndex]);
   }
+
+  const Icon =
+    borderStyle === "square"
+      ? Square
+      : borderStyle === "circle"
+        ? Circle
+        : Squircle;
   return <div>BorderStyleButton</div>;
 }
