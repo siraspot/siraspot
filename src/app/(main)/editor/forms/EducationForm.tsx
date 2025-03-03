@@ -12,6 +12,7 @@ import { EditorFormProps } from "@/lib/types";
 import { cn } from "@/lib/utils";
 import { educationSchema, EducationValues } from "@/lib/validation";
 import {
+  closestCenter,
   DndContext,
     DragEndEvent,
   KeyboardSensor,
