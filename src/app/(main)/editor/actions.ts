@@ -78,6 +78,8 @@ export async function saveResume(values: ResumeValues) {
     return prisma.resume.create({
       data: {
         ...resumeValues,
+        userId,
+        photoUrl: newPhotoUrl,
       },
     });
   }
