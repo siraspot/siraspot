@@ -14,6 +14,10 @@ interface ColorPickerProps {
 }
 
 export default function ColorPicker({ color, onChange }: ColorPickerProps) {
-    const [showPopover, setShowPopover] = React.useState(false);
-  return <Popover open={showPopover} onOpenChange={setShowPopover}>ColorPicker</Popover>;
+  const [showPopover, setShowPopover] = React.useState(false);
+  return (
+    <Popover open={showPopover} onOpenChange={setShowPopover}>
+      ColorPicker
+    </Popover>
+  );
 }
