@@ -111,18 +111,6 @@ export default function EducationForm({
               ))}
             </SortableContext>
           </DndContext>
-          {/* <DndContext
-            sensors={sensors}
-            collisionDetection={closestCenter}
-            onDragEnd={handleDragEnd}
-            modifiers={[restrictToVerticalAxis]}
-          >
-            <SortableContext
-              items={fields}
-              strategy={verticalListSortingStrategy}
-            >
-            </SortableContext>
-          </DndContext> */}
           <div className="flex justify-center">
             <Button
               type="button"
