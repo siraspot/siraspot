@@ -80,7 +80,7 @@ export default function ResumeEditor() {
         setCurrentStep={setStep}
         showSmResumePreview={showSmResumePreview}
         setShowSmResumePreview={setShowSmResumePreview}
-        // isSaving={isSaving}
+        isSaving={isSaving}
       />
     </div>
   );
