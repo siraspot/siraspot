@@ -22,7 +22,7 @@ export default function ColorPicker({ color, onChange }: ColorPickerProps) {
           <PaletteIcon className="size-5" />
         </Button>
       </PopoverTrigger>
-      <PopoverContent></PopoverContent>
+      <PopoverContent className=""></PopoverContent>
     </Popover>
   );
 }
