@@ -90,6 +90,7 @@ export default function EducationForm({
           <DndContext
             sensors={sensors}
             collisionDetection={closestCenter}
+            onDragEnd={handleDragEnd}
           ></DndContext>
           {fields.map((field, index) => (
             <EducationItem
