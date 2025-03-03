@@ -12,5 +12,9 @@ export default function useAutoSaveResume(resumeData: ResumeValues) {
   const [isSaving, setIsSaving] = React.useState(false);
   const [isError, setIsError] = React.useState(false);
 
+  useEffect(() => {
+    setIsError(false);
+  }, [debouncedResumeData]);
+
   return <div>useAutoSaveResume</div>;
 }
