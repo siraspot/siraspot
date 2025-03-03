@@ -10,6 +10,7 @@ import Footer from "./Footer";
 import { ResumeValues } from "@/lib/validation";
 import { cn } from "@/lib/utils";
 import ResumePreviewSection from "./ResumePreviewSection";
+import useUnloadWarning from "@/hooks/useUnloadWarning";
 
 export default function ResumeEditor() {
   const searchParams = useSearchParams();
@@ -24,6 +25,7 @@ export default function ResumeEditor() {
   // const { isSaving, hasUnsavedChanges } = useAutoSaveResume(resumeData);
 
   // useUnloadWarning(hasUnsavedChanges);
+  useUnloadWarning();
 
   const currentStep = searchParams.get("step") || steps[0].key;
 
