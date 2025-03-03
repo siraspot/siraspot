@@ -1,16 +1,13 @@
-import useDebounce from '@/hooks/useDebounce';
-import { ResumeValues } from '@/lib/validation';
-import React from 'react'
+import useDebounce from "@/hooks/useDebounce";
+import { ResumeValues } from "@/lib/validation";
+import React from "react";
 
-export default function useAutoSaveResume(resume: ResumeValues) {
+export default function useAutoSaveResume(resumeData: ResumeValues) {
+  const debouncedResumeData = useDebounce(resumeData, 1500);
 
-    const debouncedResumeData = useDebounce(resumeData, 1500);
+  const [lastSavedData, setLastSavedData] = React.useState(
+    structuredClone(resumeData)
+  );
 
-    const [lastSavedData, setLastSavedData] = React.useState(
-        structuredClone(resumeData),
-      );
-
-  return (
-    <div>useAutoSaveResume</div>
-  )
+  return <div>useAutoSaveResume</div>;
 }
