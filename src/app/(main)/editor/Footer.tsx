@@ -3,21 +3,22 @@ import { Button } from "@/components/ui/button";
 // import { FileUserIcon, PenLineIcon } from "lucide-react";
 import Link from "next/link";
 import { steps } from "./steps";
+import { PenLineIcon } from "lucide-react";
 
 interface FooterProps {
   currentStep: string;
   setCurrentStep: (step: string) => void;
-//   showSmResumePreview: boolean;
-//   setShowSmResumePreview: (show: boolean) => void;
-//   isSaving: boolean;
+  showSmResumePreview: boolean;
+  setShowSmResumePreview: (show: boolean) => void;
+  // isSaving: boolean;
 }
 
 export default function Footer({
   currentStep,
   setCurrentStep,
-//   showSmResumePreview,
-//   setShowSmResumePreview,
-//   isSaving,
+  showSmResumePreview,
+  setShowSmResumePreview,
+  // isSaving,
 }: FooterProps) {
   const previousStep = steps.find(
     (_, index) => steps[index + 1]?.key === currentStep
