@@ -94,6 +94,7 @@ export default function WorkExperienceForm({
       </div>
       <Form {...form}>
         <form className="space-y-3">
+          <DndContext></DndContext>
           {fields.map((field, index) => (
             <WorkExperienceItem
               id={field.id}
