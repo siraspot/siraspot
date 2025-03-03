@@ -8,6 +8,8 @@ export default function useAutoSaveResume(resumeData: ResumeValues) {
   const [lastSavedData, setLastSavedData] = React.useState(
     structuredClone(resumeData)
   );
+  
+  const [isSaving, setIsSaving] = React.useState(false);
 
   return <div>useAutoSaveResume</div>;
 }
