@@ -51,11 +51,12 @@ export async function saveResume(values: ResumeValues) {
 
   if (id) {
     return prisma.resume.update({
-        where: { id },
-        data: {
-            ...resumeValues,
-            
-        }
-    })
-  } else {}
+      where: { id },
+      data: {
+        ...resumeValues,
+        photoUrl: newPhotoUrl,
+      },
+    });
+  } else {
+  }
 }
