@@ -81,8 +81,14 @@ export default function useAutoSaveResume(resumeData: ResumeValues) {
     // console.log("lastSavedData", JSON.stringify(lastSavedData, fileReplacer));
 
     const hasUnsavedChanges =
-      JSON.stringify(debouncedResumeData, fileReplacer) !==
-      JSON.stringify(lastSavedData, fileReplacer);
+      JSON.stringify(
+        debouncedResumeData
+        // , fileReplacer
+      ) !==
+      JSON.stringify(
+        lastSavedData
+        // , fileReplacer
+      );
 
     if (hasUnsavedChanges && debouncedResumeData && !isSaving && !isError) {
       save();
@@ -97,5 +103,9 @@ export default function useAutoSaveResume(resumeData: ResumeValues) {
     // toast,
   ]);
 
-  return <div>useAutoSaveResume</div>;
+  return {
+    isSaving,
+    hasUnsavedChanges:
+      JSON.stringify(resumeData) !== JSON.stringify(lastSavedData),
+  };
 }
