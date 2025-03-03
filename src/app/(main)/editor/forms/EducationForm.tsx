@@ -20,6 +20,7 @@ import {
   useSensor,
   useSensors,
 } from "@dnd-kit/core";
+import { restrictToVerticalAxis } from "@dnd-kit/modifiers";
 import {
   arrayMove,
   sortableKeyboardCoordinates,
@@ -91,7 +92,6 @@ export default function EducationForm({
             sensors={sensors}
             collisionDetection={closestCenter}
             onDragEnd={handleDragEnd}
-
             modifiers={[restrictToVerticalAxis]}
           ></DndContext>
           {fields.map((field, index) => (
