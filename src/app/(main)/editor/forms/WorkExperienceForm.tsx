@@ -100,7 +100,7 @@ export default function WorkExperienceForm({
             onDragEnd={handleDragEnd}
             modifiers={[restrictToVerticalAxis]}
           >
-            <SortableContext></SortableContext>
+            <SortableContext items={fields}></SortableContext>
           </DndContext>
           {fields.map((field, index) => (
             <WorkExperienceItem
