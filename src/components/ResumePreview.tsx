@@ -87,14 +87,14 @@ function PersonalInfoHeader({ resumeData }: ResumeSectionProps) {
           height={100}
           alt="Author photo"
           className="aspect-square object-cover"
-          //   style={{
-          //     borderRadius:
-          //       borderStyle === BorderStyles.SQUARE
-          //         ? "0px"
-          //         : borderStyle === BorderStyles.CIRCLE
-          //           ? "9999px"
-          //           : "10%",
-          //   }}
+            style={{
+              borderRadius:
+                borderStyle === BorderStyles.SQUARE
+                  ? "0px"
+                  : borderStyle === BorderStyles.CIRCLE
+                    ? "9999px"
+                    : "10%",
+            }}
         />
       )}
       <div className="space-y-2.5">
