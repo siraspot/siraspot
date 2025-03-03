@@ -87,14 +87,14 @@ function PersonalInfoHeader({ resumeData }: ResumeSectionProps) {
           height={100}
           alt="Author photo"
           className="aspect-square object-cover"
-            style={{
-              borderRadius:
-                borderStyle === BorderStyles.SQUARE
-                  ? "0px"
-                  : borderStyle === BorderStyles.CIRCLE
-                    ? "9999px"
-                    : "10%",
-            }}
+          style={{
+            borderRadius:
+              borderStyle === BorderStyles.SQUARE
+                ? "0px"
+                : borderStyle === BorderStyles.CIRCLE
+                  ? "9999px"
+                  : "10%",
+          }}
         />
       )}
       <div className="space-y-2.5">
@@ -287,12 +287,12 @@ function SkillsSection({ resumeData }: ResumeSectionProps) {
               className="rounded-md bg-black text-white hover:bg-black"
               style={{
                 backgroundColor: colorHex,
-                // borderRadius:
-                //   borderStyle === BorderStyles.SQUARE
-                //     ? "0px"
-                //     : borderStyle === BorderStyles.CIRCLE
-                //       ? "9999px"
-                //       : "8px",
+                borderRadius:
+                  borderStyle === BorderStyles.SQUARE
+                    ? "0px"
+                    : borderStyle === BorderStyles.CIRCLE
+                      ? "9999px"
+                      : "8px",
               }}
             >
               {skill}
