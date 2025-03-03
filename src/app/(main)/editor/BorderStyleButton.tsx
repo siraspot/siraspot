@@ -19,5 +19,10 @@ export default function BorderStyleButton({
   borderStyle,
   onChange,
 }: BorderStyleButtonProps) {
+  function handleClick() {
+    const currentIndex = borderStyle ? borderStyles.indexOf(borderStyle) : 0;
+    const nextIndex = (currentIndex + 1) % borderStyles.length;
+    onChange(borderStyles[nextIndex]);
+  }
   return <div>BorderStyleButton</div>;
 }
