@@ -53,6 +53,7 @@ export async function saveResume(values: ResumeValues) {
     return prisma.resume.update({
         where: { id },
         data: {
+            ...resumeValues,
             
         }
     })
