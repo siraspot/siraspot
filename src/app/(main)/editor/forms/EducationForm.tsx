@@ -14,13 +14,17 @@ import { educationSchema, EducationValues } from "@/lib/validation";
 import {
   closestCenter,
   DndContext,
-    DragEndEvent,
+  DragEndEvent,
   KeyboardSensor,
   PointerSensor,
   useSensor,
   useSensors,
 } from "@dnd-kit/core";
-import { arrayMove, sortableKeyboardCoordinates, useSortable } from "@dnd-kit/sortable";
+import {
+  arrayMove,
+  sortableKeyboardCoordinates,
+  useSortable,
+} from "@dnd-kit/sortable";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { GripHorizontal } from "lucide-react";
 import React from "react";
@@ -83,7 +87,10 @@ export default function EducationForm({
       </div>
       <Form {...form}>
         <form className="space-y-3">
-          <DndContext sensors={sensors} collisionDetection={closestCenter}></DndContext>
+          <DndContext
+            sensors={sensors}
+            collisionDetection={closestCenter}
+          ></DndContext>
           {fields.map((field, index) => (
             <EducationItem
               id={field.id}
