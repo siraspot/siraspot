@@ -18,7 +18,9 @@ export default function ColorPicker({ color, onChange }: ColorPickerProps) {
   return (
     <Popover open={showPopover} onOpenChange={setShowPopover}>
       <PopoverTrigger asChild>
-        <Button></Button>
+        <Button>
+          <PaletteIcon />
+        </Button>
       </PopoverTrigger>
     </Popover>
   );
