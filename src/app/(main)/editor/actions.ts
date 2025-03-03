@@ -50,6 +50,11 @@ export async function saveResume(values: ResumeValues) {
   }
 
   if (id) {
-    return prisma.resume.update({})
+    return prisma.resume.update({
+        where: { id },
+        data: {
+            
+        }
+    })
   } else {}
 }
