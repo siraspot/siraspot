@@ -1,6 +1,7 @@
 "use server";
 
 import { resumeSchema, ResumeValues } from "@/lib/validation";
+import { auth } from "@clerk/nextjs/server";
 
 
 
