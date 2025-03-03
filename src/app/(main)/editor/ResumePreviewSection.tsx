@@ -28,12 +28,12 @@ export default function ResumePreviewSection({
             setResumeData({ ...resumeData, colorHex: color.hex })
           }
         />
-        {/* <BorderStyleButton
+        <BorderStyleButton
           borderStyle={resumeData.borderStyle}
           onChange={(borderStyle) =>
             setResumeData({ ...resumeData, borderStyle })
           }
-        /> */}
+        />
       </div>
       <div className="flex w-full justify-center overflow-y-auto bg-secondary p-3">
         <ResumePreview
