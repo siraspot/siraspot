@@ -19,11 +19,11 @@ export default function ColorPicker({ color, onChange }: ColorPickerProps) {
     <Popover open={showPopover} onOpenChange={setShowPopover}>
       <PopoverTrigger asChild>
         <Button
-        variant="outline"
-        size="icon"
-        title="Change resume color"
-        onClick={() => setShowPopover(true)}
-      >
+          variant="outline"
+          size="icon"
+          title="Change resume color"
+          onClick={() => setShowPopover(true)}
+        >
           <PaletteIcon className="size-5" />
         </Button>
       </PopoverTrigger>
