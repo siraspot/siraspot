@@ -40,7 +40,7 @@ export default function PersonalInfoForm({
     return unsubscribe;
   }, [form, , resumeData, setResumeData]);
 
-  const photoInputRef = useRef<HTMLInputElement>(null);
+  const photoInputRef = React.useRef<HTMLInputElement>(null);
 
   return (
     <div className="mx-auto max-w-xl space-y-6">

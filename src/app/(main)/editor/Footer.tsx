@@ -53,9 +53,9 @@ export default function Footer({
           size="icon"
           onClick={() => setShowSmResumePreview(!showSmResumePreview)}
           className="md:hidden"
-          // title={
-          //   showSmResumePreview ? "Show input form" : "Show resume preview"
-          // }
+          title={
+            showSmResumePreview ? "Show input form" : "Show resume preview"
+          }
         >
           {showSmResumePreview ? <PenLineIcon /> : <FileUserIcon />}
         </Button>
