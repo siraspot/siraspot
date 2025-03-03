@@ -19,6 +19,8 @@ export default function useAutoSaveResume(resumeData: ResumeValues) {
   React.useEffect(() => {
     async function save() {
       setIsSaving(true);
+      await new Promise((resolve) => setTimeout(resolve, 1500));
+      setLastSavedData(structuredClone(debouncedResumeData));
       setIsSaving(false);
       //   try {
       //     setIsError(false);
