@@ -4,8 +4,6 @@ import { cn } from "@/lib/utils";
 import { ResumeValues } from "@/lib/validation";
 import ColorPicker from "./ColorPicker";
 import BorderStyleButton from "./BorderStyleButton";
-// import BorderStyleButton from "./BorderStyleButton";
-// import ColorPicker from "./ColorPicker";
 
 interface ResumePreviewSectionProps {
   resumeData: ResumeValues;
@@ -24,7 +22,7 @@ export default function ResumePreviewSection({
     >
       <div className="absolute left-1 top-1 flex flex-none flex-col gap-3 opacity-50 transition-opacity group-hover:opacity-100 lg:left-3 lg:top-3 xl:opacity-100">
         <ColorPicker
-          color={resumeData.colorHex}          
+          color={resumeData.colorHex}
           onChange={(color) =>
             setResumeData({ ...resumeData, colorHex: color.hex })
           }
