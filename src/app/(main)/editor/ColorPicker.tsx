@@ -17,7 +17,9 @@ export default function ColorPicker({ color, onChange }: ColorPickerProps) {
   const [showPopover, setShowPopover] = React.useState(false);
   return (
     <Popover open={showPopover} onOpenChange={setShowPopover}>
-      <PopoverTrigger asChild></PopoverTrigger>
+      <PopoverTrigger asChild>
+        <Button></Button>
+      </PopoverTrigger>
     </Popover>
   );
 }
