@@ -31,5 +31,5 @@ export default function BorderStyleButton({
       : borderStyle === "circle"
         ? Circle
         : Squircle;
-  return <Button><Icon className="size-5" /></Button>;
+  return <Button variant="outline" size="icon" onClick={handleClick}><Icon className="size-5" /></Button>;
 }
