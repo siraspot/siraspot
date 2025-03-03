@@ -13,7 +13,7 @@ interface ResumePreviewSectionProps {
 
 export default function ResumePreviewSection({
   resumeData,
-//   setResumeData,
+  setResumeData,
   className,
 }: ResumePreviewSectionProps) {
   return (
