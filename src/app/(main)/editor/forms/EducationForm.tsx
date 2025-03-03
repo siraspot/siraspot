@@ -23,6 +23,7 @@ import {
 import { restrictToVerticalAxis } from "@dnd-kit/modifiers";
 import {
   arrayMove,
+  SortableContext,
   sortableKeyboardCoordinates,
   useSortable,
 } from "@dnd-kit/sortable";
