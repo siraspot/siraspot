@@ -1,6 +1,6 @@
 "use server";
 
-import { ResumeValues } from "@/lib/validation";
+import { resumeSchema, ResumeValues } from "@/lib/validation";
 
 
 
