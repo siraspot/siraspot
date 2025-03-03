@@ -100,17 +100,19 @@ export default function WorkExperienceForm({
             onDragEnd={handleDragEnd}
             modifiers={[restrictToVerticalAxis]}
           >
-            <SortableContext items={fields} strategy={verticalListSortingStrategy}>
-
-          {fields.map((field, index) => (
-            <WorkExperienceItem
-              id={field.id}
-              key={field.id}
-              index={index}
-              form={form}
-              remove={remove}
-            />
-          ))}
+            <SortableContext
+              items={fields}
+              strategy={verticalListSortingStrategy}
+            >
+              {fields.map((field, index) => (
+                <WorkExperienceItem
+                  id={field.id}
+                  key={field.id}
+                  index={index}
+                  form={form}
+                  remove={remove}
+                />
+              ))}
             </SortableContext>
           </DndContext>
           {/* <DndContext
