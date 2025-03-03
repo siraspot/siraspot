@@ -99,7 +99,9 @@ export default function WorkExperienceForm({
             collisionDetection={closestCenter}
             onDragEnd={handleDragEnd}
             modifiers={[restrictToVerticalAxis]}
-          ></DndContext>
+          >
+            <SortableContext></SortableContext>
+          </DndContext>
           {fields.map((field, index) => (
             <WorkExperienceItem
               id={field.id}
