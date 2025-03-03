@@ -88,12 +88,12 @@ export async function saveResume(values: ResumeValues) {
           })),
         },
         educations: {
-            create: educations?.map((edu) => ({
-              ...edu,
-              startDate: edu.startDate ? new Date(edu.startDate) : undefined,
-              endDate: edu.endDate ? new Date(edu.endDate) : undefined,
-            })),
-          },
+          create: educations?.map((edu) => ({
+            ...edu,
+            startDate: edu.startDate ? new Date(edu.startDate) : undefined,
+            endDate: edu.endDate ? new Date(edu.endDate) : undefined,
+          })),
+        },
       },
     });
   }
