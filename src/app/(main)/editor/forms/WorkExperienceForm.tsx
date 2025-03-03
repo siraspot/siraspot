@@ -100,8 +100,8 @@ export default function WorkExperienceForm({
             onDragEnd={handleDragEnd}
             modifiers={[restrictToVerticalAxis]}
           >
-            <SortableContext items={fields} strategy={verticalListSortingStrategy}></SortableContext>
-          </DndContext>
+            <SortableContext items={fields} strategy={verticalListSortingStrategy}>
+
           {fields.map((field, index) => (
             <WorkExperienceItem
               id={field.id}
@@ -111,6 +111,8 @@ export default function WorkExperienceForm({
               remove={remove}
             />
           ))}
+            </SortableContext>
+          </DndContext>
           {/* <DndContext
             sensors={sensors}
             collisionDetection={closestCenter}
