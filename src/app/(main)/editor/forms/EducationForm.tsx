@@ -94,7 +94,7 @@ export default function EducationForm({
             onDragEnd={handleDragEnd}
             modifiers={[restrictToVerticalAxis]}
           >
-            <SortableContext></SortableContext>
+            <SortableContext collisionDetection={closestCenter} onDragEnd={handleDragEnd}></SortableContext>
           </DndContext>
           {fields.map((field, index) => (
             <EducationItem
