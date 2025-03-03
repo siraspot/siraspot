@@ -49,5 +49,5 @@ export async function saveResume(values: ResumeValues) {
     newPhotoUrl = null;
   }
 
-  if (id) {}
+  if (id) {} else {}
 }
