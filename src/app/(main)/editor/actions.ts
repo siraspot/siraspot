@@ -6,33 +6,31 @@ import { auth } from "@clerk/nextjs/server";
 import { del, put } from "@vercel/blob";
 import path from "path";
 
-
-
 export async function saveResume(values: ResumeValues) {
-    const { id } = values;
+  const { id } = values;
 
-    console.log("received values", values);
+  console.log("received values", values);
 
-    const { photo, workExperiences, educations, ...resumeValues } =
+  const { photo, workExperiences, educations, ...resumeValues } =
     resumeSchema.parse(values);
 
-    const { userId } = await auth();
-  
-    if (!userId) {
-      throw new Error("User not authenticated");
-    }
+  const { userId } = await auth();
 
-    // TODO: Check resume count for non-premium users
-  
-    const existingResume = id
-      ? await prisma.resume.findUnique({ where: { id, userId } })
-      : null;
-  
-    if (id && !existingResume) {
-      throw new Error("Resume not found");
-    }
+  if (!userId) {
+    throw new Error("User not authenticated");
+  }
 
-    let newPhotoUrl: string | undefined | null = undefined;
+  // TODO: Check resume count for non-premium users
+
+  const existingResume = id
+    ? await prisma.resume.findUnique({ where: { id, userId } })
+    : null;
+
+  if (id && !existingResume) {
+    throw new Error("Resume not found");
+  }
+
+  let newPhotoUrl: string | undefined | null = undefined;
 
   if (photo instanceof File) {
     if (existingResume?.photoUrl) {
