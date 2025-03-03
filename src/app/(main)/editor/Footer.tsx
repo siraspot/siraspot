@@ -51,7 +51,7 @@ export default function Footer({
         <Button
           variant="outline"
           size="icon"
-          // onClick={() => setShowSmResumePreview(!showSmResumePreview)}
+          onClick={() => setShowSmResumePreview(!showSmResumePreview)}
           className="md:hidden"
           // title={
           //   showSmResumePreview ? "Show input form" : "Show resume preview"
