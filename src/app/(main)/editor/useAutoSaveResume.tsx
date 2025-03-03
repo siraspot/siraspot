@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import useDebounce from "@/hooks/useDebounce";
 import { ResumeValues } from "@/lib/validation";
 import React from "react";
@@ -8,13 +9,15 @@ export default function useAutoSaveResume(resumeData: ResumeValues) {
   const [lastSavedData, setLastSavedData] = React.useState(
     structuredClone(resumeData)
   );
-  
+
   const [isSaving, setIsSaving] = React.useState(false);
   const [isError, setIsError] = React.useState(false);
 
   React.useEffect(() => {
     setIsError(false);
   }, [debouncedResumeData]);
+
+  {/* **/}
 
   React.useEffect(() => {
     async function save() {
@@ -42,7 +45,7 @@ export default function useAutoSaveResume(resumeData: ResumeValues) {
           window.history.replaceState(
             null,
             "",
-            `?${newSearchParams.toString()}`,
+            `?${newSearchParams.toString()}`
           );
         }
       } catch (error) {
@@ -65,14 +68,14 @@ export default function useAutoSaveResume(resumeData: ResumeValues) {
             </div>
           ),
         });
-      } finally {
+    //   } finally {
         setIsSaving(false);
-      }
+    //   }
     }
 
     console.log(
       "debouncedResumeData",
-      JSON.stringify(debouncedResumeData, fileReplacer),
+      JSON.stringify(debouncedResumeData, fileReplacer)
     );
     console.log("lastSavedData", JSON.stringify(lastSavedData, fileReplacer));
 
@@ -92,6 +95,9 @@ export default function useAutoSaveResume(resumeData: ResumeValues) {
     searchParams,
     toast,
   ]);
+
+  
+  {/* **/}
 
   return <div>useAutoSaveResume</div>;
 }
