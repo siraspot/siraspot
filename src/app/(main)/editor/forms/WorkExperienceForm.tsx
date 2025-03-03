@@ -34,7 +34,6 @@ import {
 import { CSS } from "@dnd-kit/utilities";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { GripHorizontal } from "lucide-react";
-import { useEffect } from "react";
 import { useFieldArray, useForm, UseFormReturn } from "react-hook-form";
 import GenerateWorkExperienceButton from "./GenerateWorkExperienceButton";
 
@@ -66,6 +65,24 @@ export default function WorkExperienceForm({
     control: form.control,
     name: "workExperiences",
   });
+
+  const sensors = useSensors(
+    useSensor(PointerSensor),
+    useSensor(KeyboardSensor, {
+      coordinateGetter: sortableKeyboardCoordinates,
+    }),
+  );
+
+  function handleDragEnd(event: DragEndEvent) {
+    const { active, over } = event;
+
+    if (over && active.id !== over.id) {
+      const oldIndex = fields.findIndex((field) => field.id === active.id);
+      const newIndex = fields.findIndex((field) => field.id === over.id);
+      move(oldIndex, newIndex);
+      return arrayMove(fields, oldIndex, newIndex);
+    }
+  }
 
   return (
     <div className="mx-auto max-w-xl space-y-6">
