@@ -29,4 +29,18 @@ export async function saveResume(values: ResumeValues) {
     if (id && !existingResume) {
       throw new Error("Resume not found");
     }
+
+    let newPhotoUrl: string | undefined | null = undefined;
+
+  if (photo instanceof File) {
+    if (existingResume?.photoUrl) {
+      await del(existingResume.photoUrl);
+    }
+
+    const blob = await put(`resume_photos/${path.extname(photo.name)}`, photo, {
+      access: "public",
+    });
+
+    newPhotoUrl = blob.url;
+  }
 }
