@@ -32,13 +32,11 @@ export default function PersonalInfoForm({
   });
 
   React.useEffect(() => {
-    const { unsubscribe } = form.watch(async (values) =>
-      {
-        const isValid = await form.trigger();
-        if (!isValid) return;
-        setResumeData({ ...resumeData, ...values });
-      }
-    );
+    const { unsubscribe } = form.watch(async (values) => {
+      const isValid = await form.trigger();
+      if (!isValid) return;
+      setResumeData({ ...resumeData, ...values });
+    });
     return unsubscribe;
   }, [form, , resumeData, setResumeData]);
 
@@ -70,7 +68,7 @@ export default function PersonalInfoForm({
                         console.log(file);
                       }}
                       // {...(value ? { value: console.log("yes", value)  } : {value: console.log("no")})}
-                        ref={photoInputRef}
+                      ref={photoInputRef}
                     />
                   </FormControl>
                   <Button
