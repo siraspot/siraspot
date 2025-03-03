@@ -89,9 +89,9 @@ export default function useAutoSaveResume(resumeData: ResumeValues) {
     }
   }, [
     debouncedResumeData,
-    // isSaving,
-    // lastSavedData,
-    // isError,
+    isSaving,
+    lastSavedData,
+    isError,
     // resumeId,
     // searchParams,
     // toast,
