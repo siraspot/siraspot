@@ -64,7 +64,6 @@ export default function Footer({
           <Button variant="secondary" asChild>
             <Link href="/resumes">Close</Link>
           </Button>
-          
           <p
             className={cn(
               "text-muted-foreground opacity-0",
