@@ -98,16 +98,15 @@ export default function EducationForm({
               items={fields}
               strategy={sortableKeyboardCoordinates}
             >
-
-          {fields.map((field, index) => (
-            <EducationItem
-              id={field.id}
-              key={field.id}
-              index={index}
-              form={form}
-              remove={remove}
-            />
-          ))}
+              {fields.map((field, index) => (
+                <EducationItem
+                  id={field.id}
+                  key={field.id}
+                  index={index}
+                  form={form}
+                  remove={remove}
+                />
+              ))}
             </SortableContext>
           </DndContext>
           {/* <DndContext
