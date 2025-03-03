@@ -91,6 +91,8 @@ export default function EducationForm({
             sensors={sensors}
             collisionDetection={closestCenter}
             onDragEnd={handleDragEnd}
+
+            modifiers={[restrictToVerticalAxis]}
           ></DndContext>
           {fields.map((field, index) => (
             <EducationItem
