@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 // import { FileUserIcon, PenLineIcon } from "lucide-react";
 import Link from "next/link";
 import { steps } from "./steps";
-import { PenLineIcon } from "lucide-react";
+import { FileUserIcon, PenLineIcon } from "lucide-react";
 
 interface FooterProps {
   currentStep: string;
