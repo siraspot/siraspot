@@ -15,7 +15,10 @@ interface BorderStyleButtonProps {
   onChange: (borderStyle: string) => void;
 }
 
-export default function BorderStyleButton() {
+export default function BorderStyleButton({
+  borderStyle,
+  onChange,
+}: BorderStyleButtonProps) {
   return (
     <div>BorderStyleButton</div>
   )
