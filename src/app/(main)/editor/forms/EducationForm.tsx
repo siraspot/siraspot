@@ -95,8 +95,8 @@ export default function EducationForm({
             modifiers={[restrictToVerticalAxis]}
           >
             <SortableContext
-              strategy={sortableKeyboardCoordinates}
               items={fields}
+              strategy={sortableKeyboardCoordinates}
             ></SortableContext>
           </DndContext>
           {fields.map((field, index) => (
