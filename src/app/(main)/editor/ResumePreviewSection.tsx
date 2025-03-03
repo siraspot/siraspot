@@ -2,6 +2,7 @@ import React from "react";
 import ResumePreview from "@/components/ResumePreview";
 import { cn } from "@/lib/utils";
 import { ResumeValues } from "@/lib/validation";
+import ColorPicker from "./ColorPicker";
 // import BorderStyleButton from "./BorderStyleButton";
 // import ColorPicker from "./ColorPicker";
 
