@@ -22,8 +22,12 @@ export default function ColorPicker({ color, onChange }: ColorPickerProps) {
           <PaletteIcon className="size-5" />
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="border-none bg-transparent shadow-none"
-        align="end"></PopoverContent>
+      <PopoverContent
+        className="border-none bg-transparent shadow-none"
+        align="end"
+      >
+        <TwitterPicker color={color} onChange={onChange} triangle="top-right" />
+      </PopoverContent>
     </Popover>
   );
 }
