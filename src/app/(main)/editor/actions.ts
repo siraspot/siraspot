@@ -55,6 +55,14 @@ export async function saveResume(values: ResumeValues) {
       data: {
         ...resumeValues,
         photoUrl: newPhotoUrl,
+        workExperiences: {
+            deleteMany: {},
+            create: workExperiences?.map((exp) => ({
+              ...exp,
+              startDate: exp.startDate ? new Date(exp.startDate) : undefined,
+              endDate: exp.endDate ? new Date(exp.endDate) : undefined,
+            })),
+          },
       },
     });
   } else {
