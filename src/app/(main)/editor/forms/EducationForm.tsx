@@ -97,7 +97,7 @@ export default function EducationForm({
           >
             <SortableContext
               items={fields}
-              strategy={sortableKeyboardCoordinates}
+              strategy={verticalListSortingStrategy}
             >
               {fields.map((field, index) => (
                 <EducationItem
