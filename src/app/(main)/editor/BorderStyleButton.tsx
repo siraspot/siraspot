@@ -8,6 +8,8 @@ export const BorderStyles = {
   SQUIRCLE: "squircle",
 };
 
+const borderStyles = Object.values(BorderStyles);
+
 export default function BorderStyleButton() {
   return (
     <div>BorderStyleButton</div>
