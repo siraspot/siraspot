@@ -41,6 +41,9 @@ export default function PersonalInfoForm({
     );
     return unsubscribe;
   }, [form, , resumeData, setResumeData]);
+
+  const photoInputRef = useRef<HTMLInputElement>(null);
+
   return (
     <div className="mx-auto max-w-xl space-y-6">
       <div className="space-y-1.5 text-center">
@@ -67,7 +70,7 @@ export default function PersonalInfoForm({
                         console.log(file);
                       }}
                       // {...(value ? { value: console.log("yes", value)  } : {value: console.log("no")})}
-                      //   ref={photoInputRef}
+                        ref={photoInputRef}
                     />
                   </FormControl>
                   <Button
