@@ -4,4 +4,6 @@ import { ResumeValues } from "@/lib/validation";
 
 
 
-export async function saveResume(values: ResumeValues) {}
+export async function saveResume(values: ResumeValues) {
+    const { id } = values;
+}
