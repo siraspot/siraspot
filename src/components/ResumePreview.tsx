@@ -87,6 +87,7 @@ function PersonalInfoHeader({ resumeData }: ResumeSectionProps) {
           height={100}
           alt="Author photo"
           className="aspect-square object-cover"
+          
         //   style={{
         //     borderRadius:
         //       borderStyle === BorderStyles.SQUARE
