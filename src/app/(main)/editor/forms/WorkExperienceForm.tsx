@@ -70,7 +70,7 @@ export default function WorkExperienceForm({
     useSensor(PointerSensor),
     useSensor(KeyboardSensor, {
       coordinateGetter: sortableKeyboardCoordinates,
-    }),
+    })
   );
 
   function handleDragEnd(event: DragEndEvent) {
@@ -94,7 +94,12 @@ export default function WorkExperienceForm({
       </div>
       <Form {...form}>
         <form className="space-y-3">
-          <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}></DndContext>
+          <DndContext
+            sensors={sensors}
+            collisionDetection={closestCenter}
+            onDragEnd={handleDragEnd}
+            modifiers={[restrictToVerticalAxis]}
+          ></DndContext>
           {fields.map((field, index) => (
             <WorkExperienceItem
               id={field.id}
@@ -262,7 +267,7 @@ function WorkExperienceItem({
         Leave <span className="font-semibold">end date</span> empty if you are
         currently working here.
       </FormDescription>
-      
+
       <FormField
         control={form.control}
         name={`workExperiences.${index}.description`}
