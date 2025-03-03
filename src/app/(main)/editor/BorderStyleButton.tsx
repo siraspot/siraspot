@@ -32,7 +32,12 @@ export default function BorderStyleButton({
         ? Circle
         : Squircle;
   return (
-    <Button variant="outline" size="icon" title="Change border style" onClick={handleClick}>
+    <Button
+      variant="outline"
+      size="icon"
+      title="Change border style"
+      onClick={handleClick}
+    >
       <Icon className="size-5" />
     </Button>
   );
