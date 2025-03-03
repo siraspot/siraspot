@@ -13,6 +13,6 @@ interface ColorPickerProps {
   onChange: ColorChangeHandler;
 }
 
-export default function ColorPicker() {
+export default function ColorPicker({ color, onChange }: ColorPickerProps) {
   return <div>ColorPicker</div>;
 }
