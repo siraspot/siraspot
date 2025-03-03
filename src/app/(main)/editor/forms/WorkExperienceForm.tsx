@@ -94,7 +94,7 @@ export default function WorkExperienceForm({
       </div>
       <Form {...form}>
         <form className="space-y-3">
-          <DndContext sensors={sensors}></DndContext>
+          <DndContext sensors={sensors} collisionDetection={closestCenter}></DndContext>
           {fields.map((field, index) => (
             <WorkExperienceItem
               id={field.id}
