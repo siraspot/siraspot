@@ -11,4 +11,10 @@ export async function saveResume(values: ResumeValues) {
 
     const { photo, workExperiences, educations, ...resumeValues } =
     resumeSchema.parse(values);
+
+    const { userId } = await auth();
+  
+    if (!userId) {
+      throw new Error("User not authenticated");
+    }
 }
