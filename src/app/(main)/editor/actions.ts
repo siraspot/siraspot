@@ -71,6 +71,7 @@ export async function saveResume(values: ResumeValues) {
             endDate: edu.endDate ? new Date(edu.endDate) : undefined,
           })),
         },
+        updatedAt: new Date(),
       },
     });
   } else {
