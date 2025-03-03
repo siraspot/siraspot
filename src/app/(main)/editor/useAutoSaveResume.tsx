@@ -10,6 +10,7 @@ export default function useAutoSaveResume(resumeData: ResumeValues) {
   );
   
   const [isSaving, setIsSaving] = React.useState(false);
+  const [isError, setIsError] = useState(false);
 
   return <div>useAutoSaveResume</div>;
 }
