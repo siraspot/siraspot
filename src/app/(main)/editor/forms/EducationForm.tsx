@@ -95,8 +95,7 @@ export default function EducationForm({
             modifiers={[restrictToVerticalAxis]}
           >
             <SortableContext
-              collisionDetection={closestCenter}
-              onDragEnd={handleDragEnd}
+            
               items={fields}
             ></SortableContext>
           </DndContext>
