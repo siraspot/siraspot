@@ -44,5 +44,10 @@ export async function saveResume(values: ResumeValues) {
     });
 
     newPhotoUrl = blob.url;
+  } else if (photo === null) {
+    if (existingResume?.photoUrl) {
+      await del(existingResume.photoUrl);
+    }
+    newPhotoUrl = null;
   }
 }
