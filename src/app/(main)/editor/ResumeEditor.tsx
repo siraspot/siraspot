@@ -25,8 +25,8 @@ export default function ResumeEditor() {
 
   const { isSaving, hasUnsavedChanges } = useAutoSaveResume(resumeData);
 
-  // useUnloadWarning(hasUnsavedChanges);
-  useUnloadWarning();
+  useUnloadWarning(hasUnsavedChanges);
+  // useUnloadWarning();
 
   const currentStep = searchParams.get("step") || steps[0].key;
 
