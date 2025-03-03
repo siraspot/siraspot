@@ -8,6 +8,11 @@ import {
 import { PaletteIcon } from "lucide-react";
 import { Color, ColorChangeHandler, TwitterPicker } from "react-color";
 
+interface ColorPickerProps {
+    color: Color | undefined;
+    onChange: ColorChangeHandler;
+  }
+
 export default function ColorPicker() {
   return (
     <div>ColorPicker</div>
