@@ -63,6 +63,14 @@ export async function saveResume(values: ResumeValues) {
               endDate: exp.endDate ? new Date(exp.endDate) : undefined,
             })),
           },
+          educations: {
+            deleteMany: {},
+            create: educations?.map((edu) => ({
+              ...edu,
+              startDate: edu.startDate ? new Date(edu.startDate) : undefined,
+              endDate: edu.endDate ? new Date(edu.endDate) : undefined,
+            })),
+          },
       },
     });
   } else {
