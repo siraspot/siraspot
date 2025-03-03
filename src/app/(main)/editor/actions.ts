@@ -76,8 +76,8 @@ export async function saveResume(values: ResumeValues) {
     });
   } else {
     return prisma.resume.create({
-        data: {}
-
-    })
+      data: {
+        ...resumeValues,},
+    });
   }
 }
