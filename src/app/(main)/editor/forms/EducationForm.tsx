@@ -12,6 +12,7 @@ import { EditorFormProps } from "@/lib/types";
 import { cn } from "@/lib/utils";
 import { educationSchema, EducationValues } from "@/lib/validation";
 import {
+  DndContext,
     DragEndEvent,
   KeyboardSensor,
   PointerSensor,
@@ -70,7 +71,7 @@ export default function EducationForm({
       return arrayMove(fields, oldIndex, newIndex);
     }
   }
-  
+
   return (
     <div className="mx-auto max-w-xl space-y-6">
       <div className="space-y-1.5 text-center">
@@ -81,6 +82,7 @@ export default function EducationForm({
       </div>
       <Form {...form}>
         <form className="space-y-3">
+          <DndContext></DndContext>
           {fields.map((field, index) => (
             <EducationItem
               id={field.id}
