@@ -10,6 +10,11 @@ export const BorderStyles = {
 
 const borderStyles = Object.values(BorderStyles);
 
+interface BorderStyleButtonProps {
+  borderStyle: string | undefined;
+  onChange: (borderStyle: string) => void;
+}
+
 export default function BorderStyleButton() {
   return (
     <div>BorderStyleButton</div>
