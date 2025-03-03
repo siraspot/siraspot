@@ -82,7 +82,7 @@ export default function EducationForm({
       </div>
       <Form {...form}>
         <form className="space-y-3">
-          <DndContext></DndContext>
+          <DndContext sensors={sensors}></DndContext>
           {fields.map((field, index) => (
             <EducationItem
               id={field.id}
