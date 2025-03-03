@@ -49,5 +49,7 @@ export async function saveResume(values: ResumeValues) {
     newPhotoUrl = null;
   }
 
-  if (id) {} else {}
+  if (id) {
+    return prisma.resume.update({})
+  } else {}
 }
