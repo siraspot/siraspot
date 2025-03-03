@@ -97,8 +97,8 @@ export default function EducationForm({
             <SortableContext
               items={fields}
               strategy={sortableKeyboardCoordinates}
-            ></SortableContext>
-          </DndContext>
+            >
+
           {fields.map((field, index) => (
             <EducationItem
               id={field.id}
@@ -108,6 +108,8 @@ export default function EducationForm({
               remove={remove}
             />
           ))}
+            </SortableContext>
+          </DndContext>
           {/* <DndContext
             sensors={sensors}
             collisionDetection={closestCenter}
