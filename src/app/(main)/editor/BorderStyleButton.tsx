@@ -31,5 +31,5 @@ export default function BorderStyleButton({
       : borderStyle === "circle"
         ? Circle
         : Squircle;
-  return <div>BorderStyleButton</div>;
+  return <Button>BorderStyleButton</Button>;
 }
