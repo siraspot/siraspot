@@ -118,8 +118,8 @@ export default function useAutoSaveResume(resumeData: ResumeValues) {
     isSaving,
     lastSavedData,
     isError,
-    // resumeId,
-    // searchParams,
+    resumeId,
+    searchParams,
     // toast,
   ]);
 
