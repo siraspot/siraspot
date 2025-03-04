@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import React from "react";
 import ResumeEditor from "./ResumeEditor";
 import prisma from "@/lib/prisma";
+import { resumeDataInclude } from "@/lib/types";
 
 interface PageProps {
   searchParams: Promise<{ resumeId?: string }>;
