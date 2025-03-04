@@ -14,6 +14,10 @@ export const metadata: Metadata = {
 export default async function Page({ searchParams }: PageProps) {
   const { resumeId } = await searchParams;
 
-  
+  const { userId } = await auth();
+
+  if (!userId) {
+    return null;
+  }
   return <ResumeEditor />;
 }
