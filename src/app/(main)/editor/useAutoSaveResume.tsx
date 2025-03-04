@@ -44,11 +44,11 @@ export default function useAutoSaveResume(resumeData: ResumeValues) {
           const newSearchParams = new URLSearchParams(searchParams);
           newSearchParams.set("resumeId", updatedResume.id);
           window.history
-            .replaceState
+            .replaceState(
                     null,
                     "",
                     `?${newSearchParams.toString()}`,
-            ();
+            );
         }
       } catch (error) {
         //     setIsError(true);
