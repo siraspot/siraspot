@@ -40,7 +40,7 @@ export default function useAutoSaveResume(resumeData: ResumeValues) {
         });
         setResumeId(updatedResume.id);
         setLastSavedData(newData);
-        //     if (searchParams.get("resumeId") !== updatedResume.id) {
+            if (searchParams.get("resumeId") !== updatedResume.id) {
         //       const newSearchParams = new URLSearchParams(searchParams);
         //       newSearchParams.set("resumeId", updatedResume.id);
         //       window.history.replaceState(
@@ -48,7 +48,7 @@ export default function useAutoSaveResume(resumeData: ResumeValues) {
         //         "",
         //         `?${newSearchParams.toString()}`,
         //       );
-        //     }
+            }
       } catch (error) {
         //     setIsError(true);
         //     console.error(error);
