@@ -47,7 +47,7 @@ export default function useAutoSaveResume(resumeData: ResumeValues) {
             .replaceState
                     null,
                     "",
-            //         `?${newSearchParams.toString()}`,
+                    `?${newSearchParams.toString()}`,
             ();
         }
       } catch (error) {
