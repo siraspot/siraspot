@@ -1,8 +1,10 @@
 import useDebounce from "@/hooks/useDebounce";
 import { ResumeValues } from "@/lib/validation";
+import { useSearchParams } from "next/navigation";
 import React from "react";
 
 export default function useAutoSaveResume(resumeData: ResumeValues) {
+    const searchParams = useSearchParams();
   const debouncedResumeData = useDebounce(resumeData, 1500);
 
   const [lastSavedData, setLastSavedData] = React.useState(
