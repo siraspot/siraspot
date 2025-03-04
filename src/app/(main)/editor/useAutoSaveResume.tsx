@@ -12,6 +12,8 @@ export default function useAutoSaveResume(resumeData: ResumeValues) {
     structuredClone(resumeData)
   );
 
+  const [resumeId, setResumeId] = React.useState(resumeData.id);
+
   const [isSaving, setIsSaving] = React.useState(false);
   const [isError, setIsError] = React.useState(false);
 
@@ -36,7 +38,7 @@ export default function useAutoSaveResume(resumeData: ResumeValues) {
           //         photo: undefined,
           //       }),
         });
-        //     setResumeId(updatedResume.id);
+            setResumeId(updatedResume.id);
         //     setLastSavedData(newData);
         //     if (searchParams.get("resumeId") !== updatedResume.id) {
         //       const newSearchParams = new URLSearchParams(searchParams);
