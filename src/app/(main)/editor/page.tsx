@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import React from "react";
 import ResumeEditor from "./ResumeEditor";
+import prisma from "@/lib/prisma";
 
 interface PageProps {
   searchParams: Promise<{ resumeId?: string }>;
@@ -27,5 +28,5 @@ export default async function Page({ searchParams }: PageProps) {
       })
     : null;
 
-  return <ResumeEditor />;
+  return <ResumeEditor resumeToEdit={resumeToEdit} />;
 }

@@ -12,6 +12,7 @@ import { cn } from "@/lib/utils";
 import ResumePreviewSection from "./ResumePreviewSection";
 import useUnloadWarning from "@/hooks/useUnloadWarning";
 import useAutoSaveResume from "./useAutoSaveResume";
+import { ResumeServerData } from "@/lib/types";
 
 interface ResumeEditorProps {
   resumeToEdit: ResumeServerData | null;
