@@ -26,7 +26,9 @@ export default function useAutoSaveResume(resumeData: ResumeValues) {
         const newData = structuredClone(debouncedResumeData);
         const updatedResume = await saveResume({
           ...newData,
-          ...(lastSavedData.photo === newData.photo && {)
+          ...(lastSavedData.photo === newData.photo && {
+            photo: undefined,
+          }),
           //       ...(JSON.stringify(lastSavedData.photo, fileReplacer) ===
           //         JSON.stringify(newData.photo, fileReplacer) && {
           //         photo: undefined,
