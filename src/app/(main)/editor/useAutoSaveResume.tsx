@@ -22,7 +22,8 @@ export default function useAutoSaveResume(resumeData: ResumeValues) {
     async function save() {
       try {
         setIsSaving(true);
-            setIsError(false);
+        setIsError(false);
+        const newData = structuredClone(debouncedResumeData);
         //     const newData = structuredClone(debouncedResumeData);
         //     const updatedResume = await saveResume({
         //       ...newData,
