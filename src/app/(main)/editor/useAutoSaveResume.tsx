@@ -104,7 +104,7 @@ export default function useAutoSaveResume(resumeData: ResumeValues) {
       JSON.stringify(debouncedResumeData, fileReplacer) !==
       JSON.stringify(
         lastSavedData
-        // , fileReplacer
+        , fileReplacer
       );
 
     if (hasUnsavedChanges && debouncedResumeData && !isSaving && !isError) {
