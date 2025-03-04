@@ -50,7 +50,7 @@ export default function useAutoSaveResume(resumeData: ResumeValues) {
           );
         }
       } catch (error) {
-        //     setIsError(true);
+            setIsError(true);
         //     console.error(error);
         //     const { dismiss } = toast({
         //       variant: "destructive",
