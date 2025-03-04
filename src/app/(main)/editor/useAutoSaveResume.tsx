@@ -33,7 +33,7 @@ export default function useAutoSaveResume(resumeData: ResumeValues) {
           //         JSON.stringify(newData.photo, fileReplacer) && {
           //         photo: undefined,
           //       }),
-          //       id: resumeId,
+                id: resumeId,
         });
         //     setResumeId(updatedResume.id);
         //     setLastSavedData(newData);
