@@ -5,6 +5,7 @@ import React from "react";
 import { saveResume } from "./actions";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
+import { fileReplacer } from "@/lib/utils";
 
 export default function useAutoSaveResume(resumeData: ResumeValues) {
   const searchParams = useSearchParams();
@@ -102,7 +103,7 @@ export default function useAutoSaveResume(resumeData: ResumeValues) {
     const hasUnsavedChanges =
       JSON.stringify(
         debouncedResumeData
-        // , fileReplacer
+        , fileReplacer
       ) !==
       JSON.stringify(
         lastSavedData
