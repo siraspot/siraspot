@@ -90,6 +90,7 @@ export default function useAutoSaveResume(resumeData: ResumeValues) {
         //   ),
         // });
       } finally {
+        setIsSaving(false);
       }
     }
 
