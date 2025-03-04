@@ -24,14 +24,14 @@ export default function useAutoSaveResume(resumeData: ResumeValues) {
         setIsSaving(true);
         setIsError(false);
         const newData = structuredClone(debouncedResumeData);
-        //     const updatedResume = await saveResume({
+            const updatedResume = await saveResume({
         //       ...newData,
         //       ...(JSON.stringify(lastSavedData.photo, fileReplacer) ===
         //         JSON.stringify(newData.photo, fileReplacer) && {
         //         photo: undefined,
         //       }),
         //       id: resumeId,
-        //     });
+            });
         //     setResumeId(updatedResume.id);
         //     setLastSavedData(newData);
         //     if (searchParams.get("resumeId") !== updatedResume.id) {
