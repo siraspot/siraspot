@@ -3,6 +3,7 @@ import { ResumeValues } from "@/lib/validation";
 import { useSearchParams } from "next/navigation";
 import React from "react";
 import { saveResume } from "./actions";
+import { toast } from "sonner";
 
 export default function useAutoSaveResume(resumeData: ResumeValues) {
   const searchParams = useSearchParams();
