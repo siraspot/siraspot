@@ -54,20 +54,41 @@ export default function useAutoSaveResume(resumeData: ResumeValues) {
       } catch (error) {
         setIsError(true);
         console.error(error);
-        const toastId = toast(
-          <div className="space-y-3">
-            <p>Could not save changes.</p>
-            <Button
-              variant="secondary"
-              onClick={() => {
-                toast.dismiss(toastId);
-                save();
-              }}
-            >
-              Retry
-            </Button>
-          </div>
-        );
+        const { dismiss } = toast({
+          variant: "destructive",
+          description: (
+            <div className="space-y-3">
+              <p>Could not save changes.</p>
+              <Button
+                variant="secondary"
+                onClick={() => {
+                  dismiss();
+                  save();
+                }}
+              >
+                Retry
+              </Button>
+            </div>
+          ),
+        });
+
+        // const dismiss = toast({
+        //   variant: "destructive",
+        //   description: (
+        //     <div className="space-y-3">
+        //       <p>Could not save changes.</p>
+        //       <Button
+        //         variant="secondary"
+        //         onClick={() => {
+        //           toast.dismiss(dismiss);
+        //           save();
+        //         }}
+        //       >
+        //         Retry
+        //       </Button>
+        //     </div>
+        //   ),
+        // });
       } finally {
       }
     }
