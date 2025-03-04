@@ -32,14 +32,14 @@ export default function useAutoSaveResume(resumeData: ResumeValues) {
         const newData = structuredClone(debouncedResumeData);
         const updatedResume = await saveResume({
           ...newData,
-          ...(lastSavedData.photo?.toString() === newData.photo?.toString() && {
-            photo: undefined,
-          }),
+          // ...(lastSavedData.photo?.toString() === newData.photo?.toString() && {
+            //   photo: undefined,
+            // }),
+                  ...(JSON.stringify(lastSavedData.photo, fileReplacer) ===
+                    JSON.stringify(newData.photo, fileReplacer) && {
+                    photo: undefined,
+                  }),
           id: resumeId,
-          //       ...(JSON.stringify(lastSavedData.photo, fileReplacer) ===
-          //         JSON.stringify(newData.photo, fileReplacer) && {
-          //         photo: undefined,
-          //       }),
         });
         setResumeId(updatedResume.id);
         setLastSavedData(newData);
@@ -71,24 +71,6 @@ export default function useAutoSaveResume(resumeData: ResumeValues) {
         );
 
         return dismiss;
-
-        // const dismiss = toast({
-        //   variant: "destructive",
-        //   description: (
-        //     <div className="space-y-3">
-        //       <p>Could not save changes.</p>
-        //       <Button
-        //         variant="secondary"
-        //         onClick={() => {
-        //           toast.dismiss(dismiss);
-        //           save();
-        //         }}
-        //       >
-        //         Retry
-        //       </Button>
-        //     </div>
-        //   ),
-        // });
       } finally {
         setIsSaving(false);
       }
