@@ -45,7 +45,7 @@ export default function useAutoSaveResume(resumeData: ResumeValues) {
           newSearchParams.set("resumeId", updatedResume.id);
           window.history
             .replaceState
-            //         null,
+                    null,
             //         "",
             //         `?${newSearchParams.toString()}`,
             ();
