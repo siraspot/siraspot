@@ -54,21 +54,21 @@ export default function useAutoSaveResume(resumeData: ResumeValues) {
         setIsError(true);
         console.error(error);
         const { dismiss } = toast({
-                variant: "destructive",
-                description: (
-                  <div className="space-y-3">
-                    <p>Could not save changes.</p>
-                    <Button
-                      variant="secondary"
-                      onClick={() => {
-                        dismiss();
-                        save();
-                      }}
-                    >
-                      Retry
-                    </Button>
-                  </div>
-                ),
+          variant: "destructive",
+          description: (
+            <div className="space-y-3">
+              <p>Could not save changes.</p>
+              <Button
+                variant="secondary"
+                onClick={() => {
+                  dismiss();
+                  save();
+                }}
+              >
+                Retry
+              </Button>
+            </div>
+          ),
         });
       } finally {
       }
