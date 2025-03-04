@@ -33,12 +33,12 @@ export default function useAutoSaveResume(resumeData: ResumeValues) {
         const updatedResume = await saveResume({
           ...newData,
           // ...(lastSavedData.photo?.toString() === newData.photo?.toString() && {
-            //   photo: undefined,
-            // }),
-                  ...(JSON.stringify(lastSavedData.photo, fileReplacer) ===
-                    JSON.stringify(newData.photo, fileReplacer) && {
-                    photo: undefined,
-                  }),
+          //   photo: undefined,
+          // }),
+          ...(JSON.stringify(lastSavedData.photo, fileReplacer) ===
+            JSON.stringify(newData.photo, fileReplacer) && {
+            photo: undefined,
+          }),
           id: resumeId,
         });
         setResumeId(updatedResume.id);
