@@ -26,6 +26,6 @@ export default async function Page({ searchParams }: PageProps) {
         include: resumeDataInclude,
       })
     : null;
-    
+
   return <ResumeEditor />;
 }

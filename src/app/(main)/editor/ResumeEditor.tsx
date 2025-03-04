@@ -13,7 +13,11 @@ import ResumePreviewSection from "./ResumePreviewSection";
 import useUnloadWarning from "@/hooks/useUnloadWarning";
 import useAutoSaveResume from "./useAutoSaveResume";
 
-export default function ResumeEditor() {
+interface ResumeEditorProps {
+  resumeToEdit: ResumeServerData | null;
+}
+
+export default function ResumeEditor({ resumeToEdit }: ResumeEditorProps) {
   const searchParams = useSearchParams();
 
   const [resumeData, setResumeData] = React.useState<ResumeValues>({});
