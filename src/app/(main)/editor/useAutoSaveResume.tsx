@@ -38,7 +38,7 @@ export default function useAutoSaveResume(resumeData: ResumeValues) {
           //         photo: undefined,
           //       }),
         });
-            setResumeId(updatedResume.id);
+        setResumeId(updatedResume.id);
         //     setLastSavedData(newData);
         //     if (searchParams.get("resumeId") !== updatedResume.id) {
         //       const newSearchParams = new URLSearchParams(searchParams);
