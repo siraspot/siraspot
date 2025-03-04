@@ -52,7 +52,7 @@ export default function useAutoSaveResume(resumeData: ResumeValues) {
       } catch (error) {
         setIsError(true);
         console.error(error);
-        //     const { dismiss } = toast({
+            const { dismiss } = toast({
         //       variant: "destructive",
         //       description: (
         //         <div className="space-y-3">
@@ -68,7 +68,7 @@ export default function useAutoSaveResume(resumeData: ResumeValues) {
         //           </Button>
         //         </div>
         //       ),
-        //     });
+            });
       } finally {
       }
     }
