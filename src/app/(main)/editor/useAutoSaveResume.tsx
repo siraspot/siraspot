@@ -51,7 +51,7 @@ export default function useAutoSaveResume(resumeData: ResumeValues) {
         }
       } catch (error) {
         setIsError(true);
-            console.error(error);
+        console.error(error);
         //     const { dismiss } = toast({
         //       variant: "destructive",
         //       description: (
