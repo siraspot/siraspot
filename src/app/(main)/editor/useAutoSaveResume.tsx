@@ -56,7 +56,7 @@ export default function useAutoSaveResume(resumeData: ResumeValues) {
         const { dismiss } = toast({
                 variant: "destructive",
                 description: (
-          //         <div className="space-y-3">
+                  <div className="space-y-3">
           //           <p>Could not save changes.</p>
           //           <Button
           //             variant="secondary"
@@ -67,7 +67,7 @@ export default function useAutoSaveResume(resumeData: ResumeValues) {
           //           >
           //             Retry
           //           </Button>
-          //         </div>
+                  </div>
                 ),
         });
       } finally {
