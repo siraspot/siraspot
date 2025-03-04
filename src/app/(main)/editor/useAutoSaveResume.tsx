@@ -2,6 +2,7 @@ import useDebounce from "@/hooks/useDebounce";
 import { ResumeValues } from "@/lib/validation";
 import { useSearchParams } from "next/navigation";
 import React from "react";
+import { saveResume } from "./actions";
 
 export default function useAutoSaveResume(resumeData: ResumeValues) {
   const searchParams = useSearchParams();
@@ -29,11 +30,11 @@ export default function useAutoSaveResume(resumeData: ResumeValues) {
           ...(lastSavedData.photo?.toString() === newData.photo?.toString() && {
             photo: undefined,
           }),
+          id: resumeId,
           //       ...(JSON.stringify(lastSavedData.photo, fileReplacer) ===
           //         JSON.stringify(newData.photo, fileReplacer) && {
           //         photo: undefined,
           //       }),
-                id: resumeId,
         });
         //     setResumeId(updatedResume.id);
         //     setLastSavedData(newData);
