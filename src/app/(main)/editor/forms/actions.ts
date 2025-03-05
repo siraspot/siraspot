@@ -69,4 +69,7 @@ export async function generateSummary(input: GenerateSummaryInput) {
 
   const aiResponse = completion.choices[0].message.content;
 
+  if (!aiResponse) {
+    throw new Error("Failed to generate AI response");
+  }
 }
