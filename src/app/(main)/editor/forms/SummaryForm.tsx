@@ -12,6 +12,7 @@ import { EditorFormProps } from "@/lib/types";
 import { summarySchema, SummaryValues } from "@/lib/validation";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
+import GenerateSummaryButton from "./GenerateSummaryButton";
 
 export default function SummaryForm({
   resumeData,
@@ -56,6 +57,7 @@ export default function SummaryForm({
                   />
                 </FormControl>
                 <FormMessage />
+                <GenerateSummaryButton />
               </FormItem>
             )}
           />
