@@ -11,4 +11,7 @@ import {
 
 export async function generateSummary(input: GenerateSummaryInput) {
     // TODO: Block for non-premium users
+
+    const { jobTitle, workExperiences, educations, skills } =
+    generateSummarySchema.parse(input);
 }  
