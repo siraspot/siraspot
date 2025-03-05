@@ -57,7 +57,12 @@ export default function SummaryForm({
                   />
                 </FormControl>
                 <FormMessage />
-                <GenerateSummaryButton />
+                <GenerateSummaryButton
+                  resumeData={resumeData}
+                  onSummaryGenerated={(summary) =>
+                    form.setValue("summary", summary)
+                  }
+                />
               </FormItem>
             )}
           />
