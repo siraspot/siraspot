@@ -66,4 +66,7 @@ export async function generateSummary(input: GenerateSummaryInput) {
         },
       ],
   });
+
+  const aiResponse = completion.choices[0].message.content;
+
 }
