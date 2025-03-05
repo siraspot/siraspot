@@ -17,7 +17,23 @@ export default function GenerateSummaryButton({
 
     const [loading, setLoading] = React.useState(false);
 
-    async function handleClick() {}
+    async function handleClick() {
+        // TODO: Block for non-premium users
+
+    try {
+        setLoading(true);
+        const aiResponse = await generateSummary(resumeData);
+        onSummaryGenerated(aiResponse);
+      } catch (error) {
+        console.error(error);
+        toast({
+          variant: "destructive",
+          description: "Something went wrong. Please try again.",
+        });
+      } finally {
+        setLoading(false);
+      }
+    }
     return (
         <LoadingButton
           variant="outline"
