@@ -72,4 +72,6 @@ export async function generateSummary(input: GenerateSummaryInput) {
   if (!aiResponse) {
     throw new Error("Failed to generate AI response");
   }
+
+  return aiResponse;
 }
