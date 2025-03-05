@@ -51,4 +51,5 @@ export async function generateSummary(input: GenerateSummaryInput) {
     `;
 
   console.log("systemMessage", systemMessage);
+  console.log("userMessage", userMessage);
 }
