@@ -10,5 +10,6 @@ export default function GenerateSummaryButton({
     resumeData,
     onSummaryGenerated,
   }: GenerateSummaryButtonProps) {
+    const { toast } = useToast();
   return <div>GenerateSummaryButton</div>;
 }
