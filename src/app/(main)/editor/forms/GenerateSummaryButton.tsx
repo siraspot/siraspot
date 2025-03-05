@@ -1,4 +1,5 @@
 import React from 'react'
+import { ResumeValues } from "@/lib/validation";
 
 interface GenerateSummaryButtonProps {
     resumeData: ResumeValues;
