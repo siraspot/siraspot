@@ -56,15 +56,15 @@ export async function generateSummary(input: GenerateSummaryInput) {
   const completion = await openai.chat.completions.create({
     model: "gpt-4o-mini",
     messages: [
-        {
-          role: "system",
-          content: systemMessage,
-        },
-        {
-          role: "user",
-          content: userMessage,
-        },
-      ],
+      {
+        role: "system",
+        content: systemMessage,
+      },
+      {
+        role: "user",
+        content: userMessage,
+      },
+    ],
   });
 
   const aiResponse = completion.choices[0].message.content;
