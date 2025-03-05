@@ -1,5 +1,6 @@
 "use server";
 
+import openai from "@/lib/openai";
 import prisma from "@/lib/prisma";
 import {
   GenerateSummaryInput,
