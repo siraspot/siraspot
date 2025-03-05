@@ -20,7 +20,7 @@ export async function generateSummary(input: GenerateSummaryInput) {
     Only return the summary and do not include any other information in the response. Keep it concise and professional.
     `;
 
-    const userMessage = `
+  const userMessage = `
     Please generate a professional resume summary from this data:
 
     Job title: ${jobTitle || "N/A"}
@@ -33,7 +33,7 @@ export async function generateSummary(input: GenerateSummaryInput) {
 
         Description:
         ${exp.description || "N/A"}
-        `,
+        `
       )
       .join("\n\n")}
 
@@ -42,7 +42,7 @@ export async function generateSummary(input: GenerateSummaryInput) {
       ?.map(
         (edu) => `
         Degree: ${edu.degree || "N/A"} at ${edu.school || "N/A"} from ${edu.startDate || "N/A"} to ${edu.endDate || "N/A"}
-        `,
+        `
       )
       .join("\n\n")}
 
