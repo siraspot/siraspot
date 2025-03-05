@@ -50,5 +50,5 @@ export async function generateSummary(input: GenerateSummaryInput) {
       ${skills}
     `;
 
-    console.log("systemMessage", systemMessage);
+  console.log("systemMessage", systemMessage);
 }
