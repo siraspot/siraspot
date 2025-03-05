@@ -3,6 +3,7 @@ import { ResumeValues } from "@/lib/validation";
 import { useToast } from "@/hooks/use-toast";
 import LoadingButton from "@/components/LoadingButton";
 import { WandSparklesIcon } from "lucide-react";
+import { generateSummary } from "./actions";
 
 interface GenerateSummaryButtonProps {
   resumeData: ResumeValues;
