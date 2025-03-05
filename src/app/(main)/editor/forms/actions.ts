@@ -8,3 +8,7 @@ import {
   generateWorkExperienceSchema,
   WorkExperience,
 } from "@/lib/validation";
+
+export async function generateSummary(input: GenerateSummaryInput) {
+    // TODO: Block for non-premium users
+}  
