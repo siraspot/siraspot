@@ -1,6 +1,8 @@
 import React from "react";
 import { ResumeValues } from "@/lib/validation";
 import { useToast } from "@/hooks/use-toast";
+import LoadingButton from "@/components/LoadingButton";
+import { WandSparklesIcon } from "lucide-react";
 
 interface GenerateSummaryButtonProps {
   resumeData: ResumeValues;
@@ -14,6 +16,8 @@ export default function GenerateSummaryButton({
     const { toast } = useToast();
 
     const [loading, setLoading] = React.useState(false);
+
+    async function handleClick() {}
     return (
         <LoadingButton
           variant="outline"
