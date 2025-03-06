@@ -1,16 +1,5 @@
-import React from "react";
 import LoadingButton from "@/components/LoadingButton";
 import { Button } from "@/components/ui/button";
-import {
-  GenerateWorkExperienceInput,
-  generateWorkExperienceSchema,
-  WorkExperience,
-} from "@/lib/validation";
-import { WandSparklesIcon } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
-import { Form, useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { generateWorkExperience } from "./actions";
 import {
   Dialog,
   DialogContent,
@@ -18,8 +7,26 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
 import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/hooks/use-toast";
+import {
+  GenerateWorkExperienceInput,
+  generateWorkExperienceSchema,
+  WorkExperience,
+} from "@/lib/validation";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { WandSparklesIcon } from "lucide-react";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { generateWorkExperience } from "./actions";
 
 interface GenerateWorkExperienceButtonProps {
   onWorkExperienceGenerated: (workExperience: WorkExperience) => void;
@@ -28,7 +35,7 @@ interface GenerateWorkExperienceButtonProps {
 export default function GenerateWorkExperienceButton({
   onWorkExperienceGenerated,
 }: GenerateWorkExperienceButtonProps) {
-  const [showInputDialog, setShowInputDialog] = React.useState(false);
+  const [showInputDialog, setShowInputDialog] = useState(false);
 
   return (
     <>
