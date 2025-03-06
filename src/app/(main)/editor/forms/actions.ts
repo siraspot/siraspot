@@ -84,7 +84,13 @@ export async function generateWorkExperience(
   const { description } = generateWorkExperienceSchema.parse(input);
 
   const systemMessage = `
-    You are a job resume generator AI. Your task is to write a professional work experience description given the user's provided data.
-    Only return the description and do not include any other information in the response. Keep it concise and professional.
-    `;
+    You are a job resume generator AI. Your task is to generate a single work experience entry based on the user input.
+  Your response must adhere to the following structure. You can omit fields if they can't be infered from the provided data, but don't add any new ones.
+
+  Job title: <job title>
+  Company: <company name>
+  Start date: <format: YYYY-MM-DD> (only if provided)
+  End date: <format: YYYY-MM-DD> (only if provided)
+  Description: <an optimized description in bullet format, might be infered from the job title>
+  `;
 }
