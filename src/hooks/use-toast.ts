@@ -14,15 +14,17 @@ type ToastOptions = {
   title?: string;
   description?: string;
   action?: React.ReactNode;
+  variant?: "default" | "destructive";
 };
 
-function toast({ title, description, action }: ToastOptions) {
+function toast({ title, description, action, variant }: ToastOptions) {
   const id = genId();
   
   sonnerToast(title || "Notification", {
     description,
     action,
     id,
+    className: variant === "destructive" ? "bg-red-500 text-white" : undefined,
   });
 
   return {
