@@ -50,4 +50,11 @@ function InputDialog({
 }: InputDialogProps) {
   const { toast } = useToast();
 
+  const form = useForm<GenerateWorkExperienceInput>({
+    resolver: zodResolver(generateWorkExperienceSchema),
+    defaultValues: {
+      description: "",
+    },
+  });
+
 }
