@@ -11,7 +11,12 @@ import { useToast } from "@/hooks/use-toast";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { generateWorkExperience } from "./actions";
-import { Dialog, DialogContent, DialogHeader } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 
 interface GenerateWorkExperienceButtonProps {
   onWorkExperienceGenerated: (workExperience: WorkExperience) => void;
@@ -78,12 +83,13 @@ function InputDialog({
     }
   }
 
-  return <Dialog open={open} onOpenChange={onOpenChange}>
-    <DialogContent>
-      <DialogHeader>
-      <DialogTitle>Generate work experience</DialogTitle>
-
-      </DialogHeader>
-    </DialogContent>
-  </Dialog>;
+  return (
+    <Dialog open={open} onOpenChange={onOpenChange}>
+      <DialogContent>
+        <DialogHeader>
+          <DialogTitle>Generate work experience</DialogTitle>
+        </DialogHeader>
+      </DialogContent>
+    </Dialog>
+  );
 }
