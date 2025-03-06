@@ -5,6 +5,7 @@ import { GenerateWorkExperienceInput, WorkExperience } from '@/lib/validation';
 import { WandSparklesIcon } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
 
 interface GenerateWorkExperienceButtonProps {
   onWorkExperienceGenerated: (workExperience: WorkExperience) => void;
