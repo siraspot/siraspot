@@ -2,6 +2,7 @@ import React from 'react'
 import LoadingButton from "@/components/LoadingButton";
 import { Button } from "@/components/ui/button";
 import { WorkExperience } from '@/lib/validation';
+import { WandSparklesIcon } from 'lucide-react';
 
 interface GenerateWorkExperienceButtonProps {
   onWorkExperienceGenerated: (workExperience: WorkExperience) => void;
