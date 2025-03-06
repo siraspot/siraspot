@@ -80,4 +80,7 @@ export async function generateWorkExperience(
   input: GenerateWorkExperienceInput
 ) {
   // TODO: Block for non-premium users
+
+  const { description } = generateWorkExperienceSchema.parse(input);
+
 }
