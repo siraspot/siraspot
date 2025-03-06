@@ -112,4 +112,7 @@ export async function generateWorkExperience(
       },
     ],
   });
+
+  const aiResponse = completion.choices[0].message.content;
+
 }
