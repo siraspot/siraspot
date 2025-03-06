@@ -77,7 +77,7 @@ export async function generateSummary(input: GenerateSummaryInput) {
 }
 
 export async function generateWorkExperience(
-    input: GenerateWorkExperienceInput,
-  ) {
-    // TODO: Block for non-premium users
-    }
+  input: GenerateWorkExperienceInput
+) {
+  // TODO: Block for non-premium users
+}
