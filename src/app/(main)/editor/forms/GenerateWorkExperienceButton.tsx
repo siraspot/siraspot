@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { WorkExperience } from '@/lib/validation';
 import { WandSparklesIcon } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { useForm } from 'react-hook-form';
 
 interface GenerateWorkExperienceButtonProps {
   onWorkExperienceGenerated: (workExperience: WorkExperience) => void;
