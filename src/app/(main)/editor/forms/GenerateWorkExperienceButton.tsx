@@ -13,6 +13,24 @@ export default function GenerateWorkExperienceButton({
   const [showInputDialog, setShowInputDialog] = React.useState(false);
 
   return (
-    <div>GenerateWorkExperienceButton</div>
-  )
+    <>
+      <Button
+        variant="outline"
+        type="button"
+        // TODO: Block for non-premium users
+        onClick={() => setShowInputDialog(true)}
+      >
+        <WandSparklesIcon className="size-4" />
+        Smart fill (AI)
+      </Button>
+      <InputDialog
+        open={showInputDialog}
+        onOpenChange={setShowInputDialog}
+        onWorkExperienceGenerated={(workExperience) => {
+          onWorkExperienceGenerated(workExperience);
+          setShowInputDialog(false);
+        }}
+      />
+    </>
+  );
 }
