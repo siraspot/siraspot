@@ -93,4 +93,6 @@ export async function generateWorkExperience(
   End date: <format: YYYY-MM-DD> (only if provided)
   Description: <an optimized description in bullet format, might be infered from the job title>
   `;
+
+  const userMessage = ``
 }
