@@ -69,6 +69,7 @@ function InputDialog({
       const response = await generateWorkExperience(input);
       onWorkExperienceGenerated(response);
     } catch (error) {
-      console.error(error);}
+      console.error(error);
+    }
   }
 }
