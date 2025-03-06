@@ -36,7 +36,16 @@ export default function GenerateWorkExperienceButton({
   );
 }
 
+interface InputDialogProps {
+  open: boolean;
+  onOpenChange: (open: boolean) => void;
+  onWorkExperienceGenerated: (workExperience: WorkExperience) => void;
+}
 
-function InputDialog() {
+function InputDialog({
+  open,
+  onOpenChange,
+  onWorkExperienceGenerated,
+}: InputDialogProps) {
   
 }
