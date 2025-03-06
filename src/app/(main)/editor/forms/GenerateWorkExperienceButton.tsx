@@ -59,4 +59,7 @@ function InputDialog({
     },
   });
 
+  async function onSubmit(input: GenerateWorkExperienceInput) {
+  }
+
 }
