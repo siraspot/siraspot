@@ -88,6 +88,10 @@ function InputDialog({
       <DialogContent>
         <DialogHeader>
           <DialogTitle>Generate work experience</DialogTitle>
+          <DialogDescription>
+            Describe this work experience and the AI will generate an optimized
+            entry for you.
+          </DialogDescription>
         </DialogHeader>
       </DialogContent>
     </Dialog>
