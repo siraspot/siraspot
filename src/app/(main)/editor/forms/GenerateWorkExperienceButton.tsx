@@ -63,5 +63,11 @@ function InputDialog({
     },
   });
 
-  async function onSubmit(input: GenerateWorkExperienceInput) {}
+  async function onSubmit(input: GenerateWorkExperienceInput) {
+    try {
+      
+    } catch (error) {
+      
+    }
+  }
 }
