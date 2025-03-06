@@ -94,5 +94,22 @@ export async function generateWorkExperience(
   Description: <an optimized description in bullet format, might be infered from the job title>
   `;
 
-  const userMessage = ``
+  const userMessage = `
+  Please provide a work experience entry from this description:
+  ${description}
+  `;
+
+  const completion = await openai.chat.completions.create({
+    model: "gpt-4o-mini",
+    messages: [
+      {
+        role: "system",
+        content: systemMessage,
+      },
+      {
+        role: "user",
+        content: userMessage,
+      },
+    ],
+  });
 }
