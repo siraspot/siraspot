@@ -1,11 +1,15 @@
-import React from 'react'
+import React from "react";
 import LoadingButton from "@/components/LoadingButton";
 import { Button } from "@/components/ui/button";
-import { GenerateWorkExperienceInput, generateWorkExperienceSchema, WorkExperience } from '@/lib/validation';
-import { WandSparklesIcon } from 'lucide-react';
-import { useToast } from '@/hooks/use-toast';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
+import {
+  GenerateWorkExperienceInput,
+  generateWorkExperienceSchema,
+  WorkExperience,
+} from "@/lib/validation";
+import { WandSparklesIcon } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 
 interface GenerateWorkExperienceButtonProps {
   onWorkExperienceGenerated: (workExperience: WorkExperience) => void;
@@ -59,7 +63,5 @@ function InputDialog({
     },
   });
 
-  async function onSubmit(input: GenerateWorkExperienceInput) {
-  }
-
+  async function onSubmit(input: GenerateWorkExperienceInput) {}
 }
