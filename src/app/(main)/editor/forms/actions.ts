@@ -118,4 +118,8 @@ export async function generateWorkExperience(
   if (!aiResponse) {
     throw new Error("Failed to generate AI response");
   }
+
+  console.log("aiResponse", aiResponse);
+
+  
 }
