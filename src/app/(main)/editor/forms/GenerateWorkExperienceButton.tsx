@@ -70,7 +70,10 @@ function InputDialog({
       onWorkExperienceGenerated(response);
     } catch (error) {
       console.error(error);
-      
+      toast({
+        variant: "destructive",
+        description: "Something went wrong. Please try again.",
+      });
     }
   }
 }
