@@ -83,4 +83,5 @@ export async function generateWorkExperience(
 
   const { description } = generateWorkExperienceSchema.parse(input);
 
+  const systemMessage = ``
 }
