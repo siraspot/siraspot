@@ -70,6 +70,7 @@ function InputDialog({
       onWorkExperienceGenerated(response);
     } catch (error) {
       console.error(error);
+      
     }
   }
 }
