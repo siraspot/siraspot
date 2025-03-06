@@ -41,14 +41,14 @@ export default function GenerateWorkExperienceButton({
         <WandSparklesIcon className="size-4" />
         Smart fill (AI)
       </Button>
-      {/* <InputDialog
+      <InputDialog
         open={showInputDialog}
         onOpenChange={setShowInputDialog}
         onWorkExperienceGenerated={(workExperience) => {
           onWorkExperienceGenerated(workExperience);
           setShowInputDialog(false);
         }}
-      /> */}
+      />
     </>
   );
 }
