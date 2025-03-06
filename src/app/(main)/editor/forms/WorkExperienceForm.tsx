@@ -1,4 +1,3 @@
-import React from "react";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -34,6 +33,7 @@ import {
 import { CSS } from "@dnd-kit/utilities";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { GripHorizontal } from "lucide-react";
+import { useEffect } from "react";
 import { useFieldArray, useForm, UseFormReturn } from "react-hook-form";
 import GenerateWorkExperienceButton from "./GenerateWorkExperienceButton";
 
@@ -48,7 +48,7 @@ export default function WorkExperienceForm({
     },
   });
 
-  React.useEffect(() => {
+  useEffect(() => {
     const { unsubscribe } = form.watch(async (values) => {
       const isValid = await form.trigger();
       if (!isValid) return;
@@ -70,7 +70,7 @@ export default function WorkExperienceForm({
     useSensor(PointerSensor),
     useSensor(KeyboardSensor, {
       coordinateGetter: sortableKeyboardCoordinates,
-    })
+    }),
   );
 
   function handleDragEnd(event: DragEndEvent) {
@@ -163,7 +163,7 @@ function WorkExperienceItem({
     <div
       className={cn(
         "space-y-3 rounded-md border bg-background p-3",
-        isDragging && "relative z-50 cursor-grab shadow-xl"
+        isDragging && "relative z-50 cursor-grab shadow-xl",
       )}
       ref={setNodeRef}
       style={{
@@ -252,7 +252,6 @@ function WorkExperienceItem({
         Leave <span className="font-semibold">end date</span> empty if you are
         currently working here.
       </FormDescription>
-
       <FormField
         control={form.control}
         name={`workExperiences.${index}.description`}
