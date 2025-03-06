@@ -75,3 +75,9 @@ export async function generateSummary(input: GenerateSummaryInput) {
 
   return aiResponse;
 }
+
+export async function generateWorkExperience(
+    input: GenerateWorkExperienceInput,
+  ) {
+    // TODO: Block for non-premium users
+    }
