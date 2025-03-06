@@ -8,7 +8,7 @@ import {
 } from "@/lib/validation";
 import { WandSparklesIcon } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import { useForm } from "react-hook-form";
+import { Form, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { generateWorkExperience } from "./actions";
 import {
