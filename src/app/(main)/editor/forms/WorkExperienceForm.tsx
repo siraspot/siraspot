@@ -114,27 +114,6 @@ export default function WorkExperienceForm({
               ))}
             </SortableContext>
           </DndContext>
-          {/* <DndContext
-            sensors={sensors}
-            collisionDetection={closestCenter}
-            onDragEnd={handleDragEnd}
-            modifiers={[restrictToVerticalAxis]}
-          >
-            <SortableContext
-              items={fields}
-              strategy={verticalListSortingStrategy}
-            >
-              {fields.map((field, index) => (
-                <WorkExperienceItem
-                  id={field.id}
-                  key={field.id}
-                  index={index}
-                  form={form}
-                  remove={remove}
-                />
-              ))}
-            </SortableContext>
-          </DndContext> */}
           <div className="flex justify-center">
             <Button
               type="button"
