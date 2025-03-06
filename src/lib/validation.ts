@@ -15,11 +15,11 @@ export const personalInfoSchema = z.object({
     .refine(
       (file) =>
         !file || (file instanceof File && file.type.startsWith("image/")),
-      "Must be an image file"
+      "Must be an image file",
     )
     .refine(
       (file) => !file || file.size <= 1024 * 1024 * 4,
-      "File must be less then 4MB"
+      "File must be less then 4MB",
     ),
   firstName: optionalString,
   lastName: optionalString,
@@ -41,7 +41,7 @@ export const workExperienceSchema = z.object({
         startDate: optionalString,
         endDate: optionalString,
         description: optionalString,
-      })
+      }),
     )
     .optional(),
 });
@@ -60,7 +60,7 @@ export const educationSchema = z.object({
         school: optionalString,
         startDate: optionalString,
         endDate: optionalString,
-      })
+      }),
     )
     .optional(),
 });
@@ -94,7 +94,6 @@ export type ResumeValues = Omit<z.infer<typeof resumeSchema>, "photo"> & {
   id?: string;
   photo?: File | string | null;
 };
-
 
 export const generateWorkExperienceSchema = z.object({
   description: z
