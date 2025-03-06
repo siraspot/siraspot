@@ -14,6 +14,7 @@ import { generateWorkExperience } from "./actions";
 import {
   Dialog,
   DialogContent,
+  DialogDescription,
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
@@ -93,6 +94,30 @@ function InputDialog({
             entry for you.
           </DialogDescription>
         </DialogHeader>
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-3">
+            <FormField
+              control={form.control}
+              name="description"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Description</FormLabel>
+                  <FormControl>
+                    <Textarea
+                      {...field}
+                      placeholder={`E.g. "from nov 2019 to dec 2020 I worked at google as a software engineer, tasks were: ...`}
+                      autoFocus
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <LoadingButton type="submit" loading={form.formState.isSubmitting}>
+              Generate
+            </LoadingButton>
+          </form>
+        </Form>
       </DialogContent>
     </Dialog>
   );
