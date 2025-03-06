@@ -19,6 +19,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { FormControl, FormField, FormItem, FormLabel } from "@/components/ui/form";
+import { Textarea } from "@/components/ui/textarea";
 
 interface GenerateWorkExperienceButtonProps {
   onWorkExperienceGenerated: (workExperience: WorkExperience) => void;
