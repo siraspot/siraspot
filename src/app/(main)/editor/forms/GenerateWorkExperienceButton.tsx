@@ -3,6 +3,7 @@ import LoadingButton from "@/components/LoadingButton";
 import { Button } from "@/components/ui/button";
 import { WorkExperience } from '@/lib/validation';
 import { WandSparklesIcon } from 'lucide-react';
+import { useToast } from '@/hooks/use-toast';
 
 interface GenerateWorkExperienceButtonProps {
   onWorkExperienceGenerated: (workExperience: WorkExperience) => void;
@@ -47,5 +48,6 @@ function InputDialog({
   onOpenChange,
   onWorkExperienceGenerated,
 }: InputDialogProps) {
-  
+  const { toast } = useToast();
+
 }
