@@ -19,7 +19,14 @@ export async function deleteResume(id: string) {
     },
   });
 
-  console.log(resume);
+  const workEx = await prisma.workExperience.findUnique({
+    where: {
+      id,
+    },
+  });
+
+  console.log("resume ==>", resume);
+  console.log("work experience ==>", workEx);
   
 
   if (!resume) {
@@ -28,6 +35,10 @@ export async function deleteResume(id: string) {
 
   if (resume.photoUrl) {
     await del(resume.photoUrl);
+  }
+
+  if (resume.workExperiences) {
+    await del(resume.workExperiences);
   }
 
   await prisma.resume.delete({

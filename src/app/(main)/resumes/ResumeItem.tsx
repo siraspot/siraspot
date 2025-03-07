@@ -23,14 +23,15 @@ import { mapToResumeValues } from "@/lib/utils";
 import { formatDate } from "date-fns";
 import { MoreVertical, Trash2 } from "lucide-react";
 import Link from "next/link";
-import { useState, useTransition } from "react";
 import { deleteResume } from "./actions";
+import React from "react";
 
 interface ResumeItemProps {
   resume: ResumeServerData;
 }
 
 export default function ResumeItem({ resume }: ResumeItemProps) {
+    const contentRef = React.useRef<HTMLDivElement>(null);
   const wasUpdated = resume.updatedAt !== resume.createdAt;
 
   return (
@@ -72,7 +73,7 @@ interface MoreMenuProps {
 }
 
 function MoreMenu({ resumeId }: MoreMenuProps) {
-  const [showDeleteConfirmation, setShowDeleteConfirmation] = useState(false);
+  const [showDeleteConfirmation, setShowDeleteConfirmation] = React.useState(false);
 
   return (
     <>
@@ -118,7 +119,7 @@ function DeleteConfirmationDialog({
 }: DeleteConfirmationDialogProps) {
   const { toast } = useToast();
 
-  const [isPending, startTransition] = useTransition();
+  const [isPending, startTransition] = React.useTransition();
 
   async function handleDelete() {
     startTransition(async () => {
@@ -129,7 +130,7 @@ function DeleteConfirmationDialog({
         console.error(error);
         toast({
           variant: "destructive",
-          description: "Something went wrong. Please try again.",
+          description: "Something went wrong. Try to remove all the work experience and education first, then please try again.",
         });
       }
     });
