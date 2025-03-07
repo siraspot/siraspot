@@ -19,6 +19,9 @@ export async function deleteResume(id: string) {
     },
   });
 
+  console.log(resume);
+  
+
   if (!resume) {
     throw new Error("Resume not found");
   }
