@@ -17,28 +17,29 @@ export async function deleteResume(id: string) {
       id,
       userId,
     },
-  });
-
-  const workEx = await prisma.workExperience.findUnique({
-    where: {
-      id,
+    include: {
+      workExperiences: true,
+      educations: true,
     },
   });
-
-  console.log("resume ==>", resume);
-  console.log("work experience ==>", workEx);
-  
 
   if (!resume) {
     throw new Error("Resume not found");
   }
 
+  console.log("resume ==>", resume);
+
+  // Delete related work experiences and education first
+  await prisma.workExperience.deleteMany({
+    where: { resumeId: id },
+  });
+
+  await prisma.education.deleteMany({
+    where: { resumeId: id },
+  });
+
   if (resume.photoUrl) {
     await del(resume.photoUrl);
-  }
-
-  if (resume.workExperiences) {
-    await del(resume.workExperiences);
   }
 
   await prisma.resume.delete({
@@ -49,3 +50,16 @@ export async function deleteResume(id: string) {
 
   revalidatePath("/resumes");
 }
+
+// const workEx = await prisma.workExperience.findUnique({
+//   where: {
+//     id,
+//     // userId,
+//   },
+// });
+
+// console.log("work experience ==>", workEx);
+
+// if (resume.workExperiences) {
+//   await del(resume.workExperiences);
+// }
