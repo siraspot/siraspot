@@ -71,7 +71,7 @@ export default function ResumeItem({ resume }: ResumeItemProps) {
           <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-white to-transparent" />
         </Link>
       </div>
-      <MoreMenu resumeId={resume.id} />
+      <MoreMenu resumeId={resume.id} onPrintClick={reactToPrintFn} />
     </div>
   );
 }
@@ -107,7 +107,7 @@ function MoreMenu({ resumeId, onPrintClick }: MoreMenuProps) {
           </DropdownMenuItem>
           <DropdownMenuItem
             className="flex items-center gap-2"
-            // onClick={onPrintClick}
+            onClick={onPrintClick}
           >
             <Printer className="size-4" />
             Print
