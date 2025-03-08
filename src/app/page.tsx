@@ -1,8 +1,8 @@
 import logo from "@/assets/logo.png";
 import resumePreview from "@/assets/resume-preview1.svg";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
