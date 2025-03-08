@@ -36,6 +36,8 @@ export default function ResumePreview({
         style={{
           zoom: (1 / 794) * width,
         }}
+        ref={contentRef}
+        id="resumePreviewContent"
       >
         {/* <h1 className="p-6 text-3xl font-bold">
           This text should change with the size of the container div
