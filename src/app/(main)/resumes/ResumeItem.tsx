@@ -33,7 +33,7 @@ interface ResumeItemProps {
 export default function ResumeItem({ resume }: ResumeItemProps) {
   const contentRef = React.useRef<HTMLDivElement>(null);
 
-  const reactToPrintFn = useReactToPrint({
+  const reactToPrintFn = reactToPrintFn({
     contentRef,
     documentTitle: resume.title || "Resume",
   });
