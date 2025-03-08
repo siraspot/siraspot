@@ -25,6 +25,7 @@ import { MoreVertical, Trash2 } from "lucide-react";
 import Link from "next/link";
 import { deleteResume } from "./actions";
 import React from "react";
+import {useReactToPrint} from "react-to-print";
 
 interface ResumeItemProps {
   resume: ResumeServerData;
@@ -33,7 +34,7 @@ interface ResumeItemProps {
 export default function ResumeItem({ resume }: ResumeItemProps) {
   const contentRef = React.useRef<HTMLDivElement>(null);
 
-  const reactToPrintFn = reactToPrintFn({
+  const reactToPrintFn = useReactToPrint({
     contentRef,
     documentTitle: resume.title || "Resume",
   });
