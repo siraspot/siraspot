@@ -104,6 +104,13 @@ function MoreMenu({ resumeId }: MoreMenuProps) {
             <Trash2 className="size-4" />
             Delete
           </DropdownMenuItem>
+          <DropdownMenuItem
+            className="flex items-center gap-2"
+            onClick={onPrintClick}
+          >
+            <Printer className="size-4" />
+            Print
+          </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
       <DeleteConfirmationDialog
