@@ -31,7 +31,7 @@ interface ResumeItemProps {
 }
 
 export default function ResumeItem({ resume }: ResumeItemProps) {
-    const contentRef = React.useRef<HTMLDivElement>(null);
+  const contentRef = React.useRef<HTMLDivElement>(null);
   const wasUpdated = resume.updatedAt !== resume.createdAt;
 
   return (
@@ -73,7 +73,8 @@ interface MoreMenuProps {
 }
 
 function MoreMenu({ resumeId }: MoreMenuProps) {
-  const [showDeleteConfirmation, setShowDeleteConfirmation] = React.useState(false);
+  const [showDeleteConfirmation, setShowDeleteConfirmation] =
+    React.useState(false);
 
   return (
     <>
@@ -130,7 +131,8 @@ function DeleteConfirmationDialog({
         console.error(error);
         toast({
           variant: "destructive",
-          description: "Something went wrong. Try to remove all the work experience and education first, then please try again.",
+          description:
+            "Something went wrong. Try to remove all the work experience and education first, then please try again.",
         });
       }
     });
