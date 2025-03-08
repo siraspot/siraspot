@@ -9,11 +9,13 @@ import { Badge } from "./ui/badge";
 
 interface ResumePreviewProps {
   resumeData: ResumeValues;
+  contentRef?: React.Ref<HTMLDivElement>;
   className?: string;
 }
 
 export default function ResumePreview({
   resumeData,
+  contentRef,
   className,
 }: ResumePreviewProps) {
   const containerRef = React.useRef<HTMLDivElement>(null);
