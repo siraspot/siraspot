@@ -32,6 +32,12 @@ interface ResumeItemProps {
 
 export default function ResumeItem({ resume }: ResumeItemProps) {
   const contentRef = React.useRef<HTMLDivElement>(null);
+
+  const reactToPrintFn = useReactToPrint({
+    contentRef,
+    documentTitle: resume.title || "Resume",
+  });
+  
   const wasUpdated = resume.updatedAt !== resume.createdAt;
 
   return (
