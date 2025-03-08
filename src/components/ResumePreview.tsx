@@ -1,10 +1,10 @@
-import React from "react";
 import { BorderStyles } from "@/app/(main)/editor/BorderStyleButton";
 import useDimensions from "@/hooks/useDimensions";
 import { cn } from "@/lib/utils";
 import { ResumeValues } from "@/lib/validation";
 import { formatDate } from "date-fns";
 import Image from "next/image";
+import React, { useEffect, useRef, useState } from "react";
 import { Badge } from "./ui/badge";
 
 interface ResumePreviewProps {
@@ -18,16 +18,15 @@ export default function ResumePreview({
   contentRef,
   className,
 }: ResumePreviewProps) {
-  const containerRef = React.useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  //   @ts-expect-error
   const { width } = useDimensions(containerRef);
+
   return (
     <div
       className={cn(
         "aspect-[210/297] h-fit w-full bg-white text-black",
-        className
+        className,
       )}
       ref={containerRef}
     >
@@ -39,10 +38,6 @@ export default function ResumePreview({
         ref={contentRef}
         id="resumePreviewContent"
       >
-        {/* <h1 className="p-6 text-3xl font-bold">
-          This text should change with the size of the container div
-        </h1> */}
-        {/* <pre>{JSON.stringify(resumeData, null, 2)}</pre> */}
         <PersonalInfoHeader resumeData={resumeData} />
         <SummarySection resumeData={resumeData} />
         <WorkExperienceSection resumeData={resumeData} />
@@ -71,11 +66,9 @@ function PersonalInfoHeader({ resumeData }: ResumeSectionProps) {
     borderStyle,
   } = resumeData;
 
-  const [photoSrc, setPhotoSrc] = React.useState(
-    photo instanceof File ? "" : photo
-  );
+  const [photoSrc, setPhotoSrc] = useState(photo instanceof File ? "" : photo);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const objectUrl = photo instanceof File ? URL.createObjectURL(photo) : "";
     if (objectUrl) setPhotoSrc(objectUrl);
     if (photo === null) setPhotoSrc("");
@@ -164,7 +157,7 @@ function WorkExperienceSection({ resumeData }: ResumeSectionProps) {
   const { workExperiences, colorHex } = resumeData;
 
   const workExperiencesNotEmpty = workExperiences?.filter(
-    (exp) => Object.values(exp).filter(Boolean).length > 0
+    (exp) => Object.values(exp).filter(Boolean).length > 0,
   );
 
   if (!workExperiencesNotEmpty?.length) return null;
@@ -202,7 +195,6 @@ function WorkExperienceSection({ resumeData }: ResumeSectionProps) {
                 </span>
               )}
             </div>
-            {/* *** */}
             <p className="text-xs font-semibold">{exp.company}</p>
             <div className="whitespace-pre-line text-xs">{exp.description}</div>
           </div>
@@ -216,7 +208,7 @@ function EducationSection({ resumeData }: ResumeSectionProps) {
   const { educations, colorHex } = resumeData;
 
   const educationsNotEmpty = educations?.filter(
-    (edu) => Object.values(edu).filter(Boolean).length > 0
+    (edu) => Object.values(edu).filter(Boolean).length > 0,
   );
 
   if (!educationsNotEmpty?.length) return null;
