@@ -21,7 +21,7 @@ import { useToast } from "@/hooks/use-toast";
 import { ResumeServerData } from "@/lib/types";
 import { mapToResumeValues } from "@/lib/utils";
 import { formatDate } from "date-fns";
-import { MoreVertical, Trash2 } from "lucide-react";
+import { MoreVertical, Printer, Trash2 } from "lucide-react";
 import Link from "next/link";
 import { deleteResume } from "./actions";
 import React from "react";
@@ -78,9 +78,10 @@ export default function ResumeItem({ resume }: ResumeItemProps) {
 
 interface MoreMenuProps {
   resumeId: string;
+  onPrintClick: () => void;
 }
 
-function MoreMenu({ resumeId }: MoreMenuProps) {
+function MoreMenu({ resumeId, onPrintClick }: MoreMenuProps) {
   const [showDeleteConfirmation, setShowDeleteConfirmation] =
     React.useState(false);
 
@@ -106,7 +107,7 @@ function MoreMenu({ resumeId }: MoreMenuProps) {
           </DropdownMenuItem>
           <DropdownMenuItem
             className="flex items-center gap-2"
-            onClick={onPrintClick}
+            // onClick={onPrintClick}
           >
             <Printer className="size-4" />
             Print
