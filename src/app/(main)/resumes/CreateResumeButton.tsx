@@ -25,5 +25,14 @@ export default function CreateResumeButton({
       </Button>
     );
   }
-  return <div>CreateResumeButton</div>;
+
+  return (
+    <Button
+      onClick={() => premiumModal.setOpen(true)}
+      className="mx-auto flex w-fit gap-2"
+    >
+      <PlusSquare className="size-5" />
+      New resume
+    </Button>
+  );
 }
