@@ -1,11 +1,9 @@
-import React from 'react'
+import React from "react";
 
 interface CreateResumeButtonProps {
-    canCreate: boolean;
-  }
+  canCreate: boolean;
+}
 
 export default function CreateResumeButton() {
-  return (
-    <div>CreateResumeButton</div>
-  )
+  return <div>CreateResumeButton</div>;
 }
