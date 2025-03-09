@@ -32,6 +32,9 @@ export default function PremiumModal() {
             </div>
             <div className="mx-6 border-l" />
             <div className="flex w-1/2 flex-col space-y-5">
+              <h3 className="bg-gradient-to-r from-green-600 to-green-400 bg-clip-text text-center text-lg font-bold text-transparent">
+                Premium Plus
+              </h3>
             </div>
           </div>
         </div>
