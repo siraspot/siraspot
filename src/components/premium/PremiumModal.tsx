@@ -43,7 +43,7 @@ export default function PremiumModal() {
                   </li>
                 ))}
               </ul>
-                <Button>Get Premium Plus</Button>
+                <Button className="bg-gradient-to-r from-green-600 to-green-400">Get Premium Plus</Button>
             </div>
           </div>
         </div>
