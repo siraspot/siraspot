@@ -15,6 +15,14 @@ export default function PremiumModal() {
           <div className="flex">
             <div className="flex w-1/2 flex-col space-y-5">
               <h3 className="text-center text-lg font-bold">Premium</h3>
+              <ul className="list-inside space-y-2">
+                {premiumFeatures.map((feature) => (
+                  <li key={feature} className="flex items-center gap-2">
+                    <Check className="size-4 text-green-500" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
