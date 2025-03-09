@@ -11,7 +11,7 @@ export default function PremiumModal() {
           <DialogTitle>Resume Builder AI Premium</DialogTitle>
         </DialogHeader>
         <div className="space-y-6">
-            <p></p>
+            <p>Get a premium subscription to unlock more features.</p>
         </div>
       </DialogContent>
     </Dialog>
