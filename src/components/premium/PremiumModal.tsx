@@ -11,6 +11,7 @@ const premiumFeatures = ["AI tools", "Up to 3 resumes"];
 const premiumPlusFeatures = ["Infinite resumes", "Design customizations"];
 
 export default function PremiumModal() {
+    const { open, setOpen } = usePremiumModal();
   return (
     <Dialog open>
       <DialogContent className="max-w-2xl">
