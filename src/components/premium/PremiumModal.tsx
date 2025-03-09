@@ -14,7 +14,8 @@ export default function PremiumModal() {
           <p>Get a premium subscription to unlock more features.</p>
           <div className="flex">
             <div className="flex w-1/2 flex-col space-y-5">
-            <h3 className="text-center text-lg font-bold">Premium</h3></div>
+              <h3 className="text-center text-lg font-bold">Premium</h3>
+            </div>
           </div>
         </div>
       </DialogContent>
