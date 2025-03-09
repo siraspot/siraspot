@@ -1,10 +1,7 @@
-import { Button } from "@/components/ui/button";
 import prisma from "@/lib/prisma";
 import { resumeDataInclude } from "@/lib/types";
 import { auth } from "@clerk/nextjs/server";
-import { PlusSquare } from "lucide-react";
 import { Metadata } from "next";
-import Link from "next/link";
 import React from "react";
 import ResumeItem from "./ResumeItem";
 
