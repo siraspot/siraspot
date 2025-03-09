@@ -10,6 +10,7 @@ export default function PremiumModal() {
         <DialogHeader>
           <DialogTitle>Resume Builder AI Premium</DialogTitle>
         </DialogHeader>
+        <div className="space-y-6"></div>
       </DialogContent>
     </Dialog>
   );
