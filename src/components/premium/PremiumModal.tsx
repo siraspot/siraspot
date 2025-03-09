@@ -31,7 +31,8 @@ export default function PremiumModal() {
               <Button>Get Premium</Button>
             </div>
             <div className="mx-6 border-l" />
-            <div className="flex w-1/2 flex-col space-y-5"></div>
+            <div className="flex w-1/2 flex-col space-y-5">
+            </div>
           </div>
         </div>
       </DialogContent>
