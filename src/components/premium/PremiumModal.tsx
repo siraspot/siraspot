@@ -1,10 +1,12 @@
 "use client";
 
 import React from 'react'
-import { Dialog } from '../ui/dialog';
+import { Dialog, DialogContent } from '../ui/dialog';
 
 export default function PremiumModal() {
   return (
-    <Dialog>PremiumModal</Dialog>
+    <Dialog open>
+        <DialogContent></DialogContent>
+    </Dialog>
   )
 }
