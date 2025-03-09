@@ -43,6 +43,7 @@ export default function PremiumModal() {
                   </li>
                 ))}
               </ul>
+                <Button>Get Premium Plus</Button>
             </div>
           </div>
         </div>
