@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "../ui/dialog";
+import { Check } from "lucide-react";
 
 export default function PremiumModal() {
   return (
