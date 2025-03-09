@@ -4,6 +4,8 @@ import React from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "../ui/dialog";
 import { Check } from "lucide-react";
 
+const premiumFeatures = ["AI tools", "Up to 3 resumes"];
+const premiumPlusFeatures = ["Infinite resumes", "Design customizations"];
 export default function PremiumModal() {
   return (
     <Dialog open>
