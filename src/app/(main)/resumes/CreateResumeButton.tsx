@@ -4,6 +4,8 @@ interface CreateResumeButtonProps {
   canCreate: boolean;
 }
 
-export default function CreateResumeButton() {
+export default function CreateResumeButton({
+    canCreate,
+  }: CreateResumeButtonProps) {
   return <div>CreateResumeButton</div>;
 }
