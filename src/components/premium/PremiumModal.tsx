@@ -30,6 +30,7 @@ export default function PremiumModal() {
               </ul>
               <Button>Get Premium</Button>
             </div>
+            <div className="mx-6 border-l" />
           </div>
         </div>
       </DialogContent>
