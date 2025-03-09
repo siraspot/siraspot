@@ -37,7 +37,7 @@ export default async function page() {
 
   return (
     <main className="mx-auto w-full max-w-7xl space-y-6 px-3 py-6">
-      <CreateResumeButton />
+      <CreateResumeButton canCreate={totalCount < 3} />
       <div className="space-y-1">
         <h1 className="text-3xl font-bold">Your resumes</h1>
         <p>Total: {totalCount}</p>
