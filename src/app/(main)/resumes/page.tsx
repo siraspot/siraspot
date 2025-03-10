@@ -9,7 +9,7 @@ import CreateResumeButton from "./CreateResumeButton";
 export const metadata: Metadata = {
   title: "Your resumes",
   description: "page",
-}
+};
 
 export default async function page() {
   const { userId } = await auth();
