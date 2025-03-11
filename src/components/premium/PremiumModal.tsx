@@ -41,6 +41,7 @@ export default function PremiumModal() {
                     process.env.NEXT_PUBLIC_STRIP_PRICE_ID_PRO_MONTHLY!,
                   )
                 }
+                disabled={loading}
               >
                 Get Premium
               </Button>
