@@ -36,6 +36,7 @@ export default function PremiumModal() {
                 ))}
               </ul>
               <Button
+              onClick={() => handlePremiumClick("price_1J5Z3vK5Z5Z5Z5Z5")}
               >Get Premium</Button>
             </div>
             <div className="mx-6 border-l" />
