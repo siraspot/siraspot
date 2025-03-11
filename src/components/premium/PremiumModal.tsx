@@ -38,7 +38,7 @@ export default function PremiumModal() {
               <Button
                 onClick={() =>
                   handlePremiumClick(
-                    process.env.NEXT_PUBLIC_STRIP_PRICE_ID_PRO_MONTHLY!,
+                    process.env.NEXT_PUBLIC_STRIP_PRICE_ID_PRO_MONTHLY!
                   )
                 }
                 disabled={loading}
@@ -62,10 +62,12 @@ export default function PremiumModal() {
               <Button
                 onClick={() =>
                   handlePremiumClick(
-                    process.env.NEXT_PUBLIC_STRIP_PRICE_ID_PRO_MONTHLY!,
+                    process.env.NEXT_PUBLIC_STRIP_PRICE_ID_PRO_MONTHLY!
                   )
                 }
-                disabled={loading} className="bg-gradient-to-r from-green-600 to-green-400">
+                disabled={loading}
+                className="bg-gradient-to-r from-green-600 to-green-400"
+              >
                 Get Premium Plus
               </Button>
             </div>
