@@ -12,11 +12,11 @@ const premiumFeatures = ["AI tools", "Up to 3 resumes"];
 const premiumPlusFeatures = ["Infinite resumes", "Design customizations"];
 
 export default function PremiumModal() {
-    const { open, setOpen } = usePremiumModal();
-    const { toast } = useToast();
-    const [loading, setLoading] = React.useState(false);
+  const { open, setOpen } = usePremiumModal();
+  const { toast } = useToast();
+  const [loading, setLoading] = React.useState(false);
   return (
-    <Dialog  open={open} onOpenChange={setOpen}>
+    <Dialog open={open} onOpenChange={setOpen}>
       <DialogContent className="max-w-2xl">
         <DialogHeader>
           <DialogTitle>Resume Builder AI Premium</DialogTitle>
@@ -49,7 +49,9 @@ export default function PremiumModal() {
                   </li>
                 ))}
               </ul>
-                <Button className="bg-gradient-to-r from-green-600 to-green-400">Get Premium Plus</Button>
+              <Button className="bg-gradient-to-r from-green-600 to-green-400">
+                Get Premium Plus
+              </Button>
             </div>
           </div>
         </div>
