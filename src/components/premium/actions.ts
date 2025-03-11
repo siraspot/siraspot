@@ -17,10 +17,9 @@ export async function createCheckoutSession(priceId: string) {
     cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL}/billing`,
     customer_email: user.emailAddresses[0].emailAddress,
     subscription_data: {
-        metadata: {
-            userId: user.id,
-        }
-    }
-
-  })
+      metadata: {
+        userId: user.id,
+      },
+    },
+  });
 }
