@@ -3,4 +3,6 @@
 import stripe from "@/lib/stripe";
 import { currentUser } from "@clerk/nextjs/server";
 
-export async function createCheckoutSession(priceId: string) {}
+export async function createCheckoutSession(priceId: string) {
+    const user = await currentUser();
+}
