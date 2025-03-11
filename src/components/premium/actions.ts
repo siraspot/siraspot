@@ -31,5 +31,7 @@ export async function createCheckoutSession(priceId: string) {
     },
   });
 
-  if (!session.url) {}
+  if (!session.url) {
+    
+  }
 }
