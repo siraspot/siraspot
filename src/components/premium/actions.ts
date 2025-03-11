@@ -27,7 +27,7 @@ export async function createCheckoutSession(priceId: string) {
       },
     },
     consent_collection: {
-        terms_of_service: "required",
+      terms_of_service: "required",
     },
   });
 }
