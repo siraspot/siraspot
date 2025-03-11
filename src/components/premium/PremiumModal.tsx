@@ -15,6 +15,7 @@ export default function PremiumModal() {
   const { open, setOpen } = usePremiumModal();
   const { toast } = useToast();
   const [loading, setLoading] = React.useState(false);
+  async function handlePremiumClick(priceId: string) {}
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogContent className="max-w-2xl">
