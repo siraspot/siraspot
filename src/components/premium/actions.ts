@@ -26,6 +26,8 @@ export async function createCheckoutSession(priceId: string) {
         message: `I have read AI Resume Builder's [terms of service](${process.env.NEXT_PUBLIC_BASE_URL}/tos) and agree to them.`,
       },
     },
-    consent_collection: {},
+    consent_collection: {
+        
+    },
   });
 }
