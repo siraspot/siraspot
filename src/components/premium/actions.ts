@@ -22,7 +22,9 @@ export async function createCheckoutSession(priceId: string) {
       },
     },
     custom_text: {
-        terms_of_service_acceptance: {}
-    }
+      terms_of_service_acceptance: {
+        message: `I have read AI Resume Builder's [terms of service](${process.env.NEXT_PUBLIC_BASE_URL}/tos) and agree to them.`,
+      },
+    },
   });
 }
