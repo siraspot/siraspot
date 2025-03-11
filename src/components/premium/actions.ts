@@ -21,5 +21,6 @@ export async function createCheckoutSession(priceId: string) {
         userId: user.id,
       },
     },
+    custom_text: {}
   });
 }
