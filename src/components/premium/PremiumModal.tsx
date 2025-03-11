@@ -36,8 +36,14 @@ export default function PremiumModal() {
                 ))}
               </ul>
               <Button
-              onClick={() => handlePremiumClick(process.env.NEXT_PUBLIC_STRIP_PRICE_ID_PRO_MONTHLY)}
-              >Get Premium</Button>
+                onClick={() =>
+                  handlePremiumClick(
+                    process.env.NEXT_PUBLIC_STRIP_PRICE_ID_PRO_MONTHLY!
+                  )
+                }
+              >
+                Get Premium
+              </Button>
             </div>
             <div className="mx-6 border-l" />
             <div className="flex w-1/2 flex-col space-y-5">
