@@ -14,7 +14,7 @@ export async function createCheckoutSession(priceId: string) {
     line_items: [{ price: priceId, quantity: 1 }],
     mode: "subscription",
     success_url: `${process.env.NEXT_PUBLIC_BASE_URL}/billing/success`,
-    cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL}/billing/cancel`,
+    cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL}/billing`,
 
   })
 }
