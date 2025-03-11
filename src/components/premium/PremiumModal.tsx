@@ -38,7 +38,7 @@ export default function PremiumModal() {
               <Button
                 onClick={() =>
                   handlePremiumClick(
-                    process.env.NEXT_PUBLIC_STRIP_PRICE_ID_PRO_MONTHLY!
+                    process.env.NEXT_PUBLIC_STRIP_PRICE_ID_PRO_MONTHLY!,
                   )
                 }
               >
