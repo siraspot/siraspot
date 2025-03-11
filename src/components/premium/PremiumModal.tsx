@@ -14,6 +14,7 @@ const premiumPlusFeatures = ["Infinite resumes", "Design customizations"];
 export default function PremiumModal() {
     const { open, setOpen } = usePremiumModal();
     const { toast } = useToast();
+    
   return (
     <Dialog  open={open} onOpenChange={setOpen}>
       <DialogContent className="max-w-2xl">
