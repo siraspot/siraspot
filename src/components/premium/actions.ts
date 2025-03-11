@@ -30,4 +30,6 @@ export async function createCheckoutSession(priceId: string) {
       terms_of_service: "required",
     },
   });
+
+  if (!session.url) {}
 }
