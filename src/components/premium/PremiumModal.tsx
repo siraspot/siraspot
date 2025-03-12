@@ -29,6 +29,8 @@ export default function PremiumModal() {
         variant: "destructive",
         description: "Something went wrong. Please try again.",
       });
+    } finally {
+      setLoading(false);
     }
     
   }
