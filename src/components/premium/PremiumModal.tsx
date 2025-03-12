@@ -19,7 +19,7 @@ export default function PremiumModal() {
     console.log("price Id ==>", priceId);
 
     try {
-      
+      setLoading(true);
     } catch (error) {
       
     }
