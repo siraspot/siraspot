@@ -25,7 +25,10 @@ export default function PremiumModal() {
       window.location.href = redirectUrl;
     } catch (error) {
       console.error(error);
-      
+      toast({
+        variant: "destructive",
+        description: "Something went wrong. Please try again.",
+      });
     }
     
   }
