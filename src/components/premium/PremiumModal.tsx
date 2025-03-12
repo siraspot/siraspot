@@ -17,6 +17,12 @@ export default function PremiumModal() {
   const [loading, setLoading] = React.useState(false);
   async function handlePremiumClick(priceId: string) {
     console.log("price Id ==>", priceId);
+
+    try {
+      
+    } catch (error) {
+      
+    }
     
   }
   return (
@@ -65,7 +71,7 @@ export default function PremiumModal() {
               <Button
                 onClick={() =>
                   handlePremiumClick(
-                    process.env.NEXT_PUBLIC_STRIP_PRICE_ID_PRO_MONTHLY!
+                    process.env.NEXT_PUBLIC_STRIP_PRICE_ID_PRO_PLUS_MONTHLY!
                   )
                 }
                 disabled={loading}
