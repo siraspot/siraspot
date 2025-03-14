@@ -15,7 +15,7 @@ export const env = createEnv({
     BLOB_READ_WRITE_TOKEN: z.string().min(1),
     OPENAI_API_KEY: z.string().min(1),
     STRIPE_SECRET_KEY: z.string().min(1),
-    }
+    },
   schema: z.object({
     NODE_ENV: z.string().default("development"),
     PORT: z.string().default("3000"),
