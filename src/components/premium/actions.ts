@@ -10,6 +10,9 @@ export async function createCheckoutSession(priceId: string) {
     throw new Error("Unauthorized");
   }
 
+  console.log(priceId);
+  
+
   const session = await stripe.checkout.sessions.create({
     line_items: [{ price: priceId, quantity: 1 }],
     mode: "subscription",
