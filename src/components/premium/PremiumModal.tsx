@@ -8,6 +8,7 @@ import { Button } from "../ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "../ui/dialog";
 import { useToast } from "@/hooks/use-toast";
 import { createCheckoutSession } from "./actions";
+import { env } from "@/env";
 
 const premiumFeatures = ["AI tools", "Up to 3 resumes"];
 const premiumPlusFeatures = ["Infinite resumes", "Design customizations"];
