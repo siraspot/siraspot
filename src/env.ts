@@ -38,8 +38,8 @@ export const env = createEnv({
       process.env.NEXT_PUBLIC_STRIPE_PRICE_ID_PRO_PLUS_MONTHLY,
     NEXT_PUBLIC_BASE_URL: process.env.NEXT_PUBLIC_BASE_URL,
   },
-  schema: z.object({
-    NODE_ENV: z.string().default("development"),
-    PORT: z.string().default("3000"),
-  }),
+//   schema: z.object({
+//     NODE_ENV: z.string().default("development"),
+//     PORT: z.string().default("3000"),
+//   }),
 });
