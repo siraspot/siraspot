@@ -78,4 +78,6 @@ model Education {
   @@map("educations")
 }
 
-model UserSubscription {}
+model UserSubscription {
+  id                      String   @id @default(cuid())
+}
