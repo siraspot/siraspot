@@ -83,5 +83,6 @@ model UserSubscription {
   userId               String @unique
   stripeCustomerId     String @unique
   stripeSubscriptionId String @unique
-  stripePriceId           String
+  stripePriceId        String
+  stripeCurrentPeriodEnd  DateTime
 }
