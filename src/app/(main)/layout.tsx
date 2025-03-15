@@ -18,12 +18,11 @@ export default async function Layout({
   const userSubscriptionLevel = await getUserSubscriptionLevel(userId);
   return (
     <SubscriptionLevelProvider userSubscriptionLevel={userSubscriptionLevel}>
-
-    <div className="flex min-h-screen flex-col">
-      <Navbar />
-      {children}
-      <PremiumModal />
-    </div>
+      <div className="flex min-h-screen flex-col">
+        <Navbar />
+        {children}
+        <PremiumModal />
+      </div>
     </SubscriptionLevelProvider>
   );
 }
