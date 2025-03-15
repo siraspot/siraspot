@@ -19,7 +19,9 @@ export default function BorderStyleButton({
   borderStyle,
   onChange,
 }: BorderStyleButtonProps) {
-  
+  const subscriptionLevel = useSubscriptionLevel();
+
+  const premiumModal = usePremiumModal();
   function handleClick() {
     const currentIndex = borderStyle ? borderStyles.indexOf(borderStyle) : 0;
     const nextIndex = (currentIndex + 1) % borderStyles.length;
