@@ -14,6 +14,9 @@ export default function GenerateSummaryButton({
     resumeData,
     onSummaryGenerated,
   }: GenerateSummaryButtonProps) {
+    const subscriptionLevel = useSubscriptionLevel();
+  
+    const premiumModal = usePremiumModal();
     const { toast } = useToast();
 
     const [loading, setLoading] = React.useState(false);
