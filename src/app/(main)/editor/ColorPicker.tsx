@@ -14,6 +14,7 @@ interface ColorPickerProps {
 }
 
 export default function ColorPicker({ color, onChange }: ColorPickerProps) {
+  const subscriptionLevel = useSubscriptionLevel();
   const [showPopover, setShowPopover] = React.useState(false);
   return (
     <Popover open={showPopover} onOpenChange={setShowPopover}>
