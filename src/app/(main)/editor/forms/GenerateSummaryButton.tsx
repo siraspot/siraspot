@@ -4,8 +4,6 @@ import { useToast } from "@/hooks/use-toast";
 import LoadingButton from "@/components/LoadingButton";
 import { WandSparklesIcon } from "lucide-react";
 import { generateSummary } from "./actions";
-import { useSubscriptionLevel } from "../../SubscriptionLevelProvider";
-import usePremiumModal from "@/hooks/usePremiumModal";
 
 interface GenerateSummaryButtonProps {
   resumeData: ResumeValues;
