@@ -29,7 +29,7 @@ export async function saveResume(values: ResumeValues) {
 
     if (!canCreateResume(subscriptionLevel, resumeCount)) {
       throw new Error(
-        "Maximum resume count reached for this subscription level",
+        "Maximum resume count reached for this subscription level"
       );
     }
   }
@@ -51,7 +51,6 @@ export async function saveResume(values: ResumeValues) {
   if (hasCustomizations && !canUseCustomizations(subscriptionLevel)) {
     throw new Error("Customizations not allowed for this subscription level");
   }
-
   let newPhotoUrl: string | undefined | null = undefined;
 
   if (photo instanceof File) {
