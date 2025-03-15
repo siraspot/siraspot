@@ -18,7 +18,7 @@ export default async function page() {
     return null;
   }
 
-  const [resumes, totalCount] = await Promise.all([
+  const [resumes, totalCount, SubscriptionLevel] = await Promise.all([
     prisma.resume.findMany({
       where: {
         userId,
@@ -33,6 +33,7 @@ export default async function page() {
         userId,
       },
     }),
+    getUserSubscriptionLevel(userId),
   ]);
 
   return (
