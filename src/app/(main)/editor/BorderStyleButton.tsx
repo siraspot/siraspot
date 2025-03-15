@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Circle, Square, Squircle } from "lucide-react";
 import { useSubscriptionLevel } from "../SubscriptionLevelProvider";
+import usePremiumModal from "@/hooks/usePremiumModal";
 
 export const BorderStyles = {
   SQUARE: "square",
