@@ -5,6 +5,7 @@ import { Metadata } from "next";
 import React from "react";
 import ResumeItem from "./ResumeItem";
 import CreateResumeButton from "./CreateResumeButton";
+import { getUserSubscriptionLevel } from "@/lib/subscription";
 
 export const metadata: Metadata = {
   title: "Your resumes",
