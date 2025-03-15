@@ -2,6 +2,7 @@ import PremiumModal from "@/components/premium/PremiumModal";
 import Navbar from "./Navbar";
 import { auth } from "@clerk/nextjs/server";
 import { getUserSubscriptionLevel } from "@/lib/subscription";
+import SubscriptionLevelProvider from "./SubscriptionLevelProvider";
 
 export default async function Layout({
   children,
@@ -16,10 +17,13 @@ export default async function Layout({
 
   const userSubscriptionLevel = await getUserSubscriptionLevel(userId);
   return (
+    <SubscriptionLevelProvider userSubscriptionLevel={userSubscriptionLevel}>
+
     <div className="flex min-h-screen flex-col">
       <Navbar />
       {children}
       <PremiumModal />
     </div>
+    </SubscriptionLevelProvider>
   );
 }
