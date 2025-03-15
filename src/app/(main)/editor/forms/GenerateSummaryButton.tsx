@@ -19,6 +19,7 @@ export default function GenerateSummaryButton({
     const subscriptionLevel = useSubscriptionLevel();
   
     const premiumModal = usePremiumModal();
+    
     const { toast } = useToast();
 
     const [loading, setLoading] = React.useState(false);
