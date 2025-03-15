@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/popover";
 import { PaletteIcon } from "lucide-react";
 import { Color, ColorChangeHandler, TwitterPicker } from "react-color";
+import { useSubscriptionLevel } from "../SubscriptionLevelProvider";
 
 interface ColorPickerProps {
   color: Color | undefined;
