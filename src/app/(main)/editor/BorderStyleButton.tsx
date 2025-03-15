@@ -26,6 +26,10 @@ export default function BorderStyleButton({
   const premiumModal = usePremiumModal();
   
   function handleClick() {
+    if (!canUseCustomizations(subscriptionLevel)) {
+      premiumModal.setOpen(true);
+      return;
+    }
     const currentIndex = borderStyle ? borderStyles.indexOf(borderStyle) : 0;
     const nextIndex = (currentIndex + 1) % borderStyles.length;
     onChange(borderStyles[nextIndex]);
