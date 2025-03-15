@@ -79,5 +79,6 @@ model Education {
 }
 
 model UserSubscription {
-  id String @id @default(cuid())
+  id     String @id @default(cuid())
+  userId String @unique
 }
