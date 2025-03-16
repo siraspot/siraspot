@@ -1,6 +1,7 @@
 "use server";
 
 import openai from "@/lib/openai";
+import { getUserSubscriptionLevel } from "@/lib/subscription";
 import {
   GenerateSummaryInput,
   generateSummarySchema,
