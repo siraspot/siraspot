@@ -40,7 +40,7 @@ export default function GenerateWorkExperienceButton({
   const subscriptionLevel = useSubscriptionLevel();
 
   const premiumModal = usePremiumModal();
-  
+
   const [showInputDialog, setShowInputDialog] = useState(false);
 
   return (
@@ -48,8 +48,13 @@ export default function GenerateWorkExperienceButton({
       <Button
         variant="outline"
         type="button"
-        // TODO: Block for non-premium users
-        onClick={() => setShowInputDialog(true)}
+         onClick={() => {
+          if (!canUseAITools(subscriptionLevel)) {
+            premiumModal.setOpen(true);
+            return;
+          }
+          setShowInputDialog(true);
+        }}
       >
         <WandSparklesIcon className="size-4" />
         Smart fill (AI)
