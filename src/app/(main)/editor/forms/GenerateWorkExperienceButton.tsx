@@ -29,6 +29,7 @@ import { useForm } from "react-hook-form";
 import { generateWorkExperience } from "./actions";
 import { useSubscriptionLevel } from "../../SubscriptionLevelProvider";
 import usePremiumModal from "@/hooks/usePremiumModal";
+import { canUseAITools } from "@/lib/permissions";
 
 interface GenerateWorkExperienceButtonProps {
   onWorkExperienceGenerated: (workExperience: WorkExperience) => void;
@@ -48,7 +49,7 @@ export default function GenerateWorkExperienceButton({
       <Button
         variant="outline"
         type="button"
-         onClick={() => {
+        onClick={() => {
           if (!canUseAITools(subscriptionLevel)) {
             premiumModal.setOpen(true);
             return;
