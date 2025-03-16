@@ -40,6 +40,7 @@ export default function GenerateWorkExperienceButton({
   const subscriptionLevel = useSubscriptionLevel();
 
   const premiumModal = usePremiumModal();
+  
   const [showInputDialog, setShowInputDialog] = useState(false);
 
   return (
