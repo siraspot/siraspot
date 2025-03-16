@@ -13,6 +13,10 @@ import { auth } from "@clerk/nextjs/server";
 export async function generateSummary(input: GenerateSummaryInput) {
   const { userId } = await auth();
 
+  if(!userId) {
+    throw new Error("User not authenticated");
+  }
+
   const { jobTitle, workExperiences, educations, skills } =
     generateSummarySchema.parse(input);
 
