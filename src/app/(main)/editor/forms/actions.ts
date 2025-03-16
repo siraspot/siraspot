@@ -8,9 +8,10 @@ import {
   generateWorkExperienceSchema,
   WorkExperience,
 } from "@/lib/validation";
+import { auth } from "@clerk/nextjs/server";
 
 export async function generateSummary(input: GenerateSummaryInput) {
-  
+  const {userId} = await auth
 
   const { jobTitle, workExperiences, educations, skills } =
     generateSummarySchema.parse(input);
