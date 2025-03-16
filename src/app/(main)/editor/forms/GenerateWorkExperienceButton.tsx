@@ -28,6 +28,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { generateWorkExperience } from "./actions";
 import { useSubscriptionLevel } from "../../SubscriptionLevelProvider";
+import usePremiumModal from "@/hooks/usePremiumModal";
 
 interface GenerateWorkExperienceButtonProps {
   onWorkExperienceGenerated: (workExperience: WorkExperience) => void;
