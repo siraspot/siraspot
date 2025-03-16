@@ -25,7 +25,10 @@ export default function GenerateSummaryButton({
     const [loading, setLoading] = React.useState(false);
 
     async function handleClick() {
-        // TODO: Block for non-premium users
+      if (!canUseAITools(subscriptionLevel)) {
+        premiumModal.setOpen(true);
+        return;
+      }
 
     try {
         setLoading(true);
