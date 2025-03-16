@@ -6,6 +6,7 @@ import { WandSparklesIcon } from "lucide-react";
 import { generateSummary } from "./actions";
 import { useSubscriptionLevel } from "../../SubscriptionLevelProvider";
 import usePremiumModal from "@/hooks/usePremiumModal";
+import { canUseAITools } from "@/lib/permissions";
 
 interface GenerateSummaryButtonProps {
   resumeData: ResumeValues;
