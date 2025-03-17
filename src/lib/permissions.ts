@@ -6,7 +6,7 @@ export function canCreateResume(
 ) {
   const maxResumeMap: Record<SubscriptionLevel, number> = {
     free: 0,
-    pro: 1,
+    pro: 10,
     pro_plus: 3,
   };
 
@@ -16,7 +16,7 @@ export function canCreateResume(
 }
 
 export function canUseAITools(subscriptionLevel: SubscriptionLevel) {
-  return subscriptionLevel !== "free";
+  return subscriptionLevel == "free";
 }
 
 export function canUseCustomizations(subscriptionLevel: SubscriptionLevel) {
