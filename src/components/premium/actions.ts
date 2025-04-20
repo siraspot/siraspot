@@ -11,8 +11,13 @@ export async function createCheckoutSession(priceId: string) {
     throw new Error("Unauthorized");
   }
 
-  console.log(priceId);
+  console.log("User ==>", user);
   
+  console.log("price Id ==>", priceId);
+
+  // priceId = "price_1RFHZWB4KAS5W7BrSTDrcVzL";
+  
+  console.log("price Id ==>", priceId);
 
   const session = await stripe.checkout.sessions.create({
     line_items: [{ price: priceId, quantity: 1 }],
@@ -27,7 +32,7 @@ export async function createCheckoutSession(priceId: string) {
     },
     custom_text: {
       terms_of_service_acceptance: {
-        message: `I have read AI Resume Builder's [terms of service](${env.NEXT_PUBLIC_BASE_URL}/tos) and agree to them.`,
+        message: `I have read AI Resume Builder's [terms of service](${`http://localhost:3000/tos`}) and agree to them.`,
       },
     },
     consent_collection: {

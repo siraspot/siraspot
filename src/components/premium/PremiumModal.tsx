@@ -1,7 +1,6 @@
 "use client";
 
 import usePremiumModal from "@/hooks/usePremiumModal";
-
 import React from "react";
 import { Check } from "lucide-react";
 import { Button } from "../ui/button";
@@ -15,8 +14,11 @@ const premiumPlusFeatures = ["Infinite resumes", "Design customizations"];
 
 export default function PremiumModal() {
   const { open, setOpen } = usePremiumModal();
+  
   const { toast } = useToast();
+  
   const [loading, setLoading] = React.useState(false);
+  
   async function handlePremiumClick(priceId: string) {
     console.log("price Id ==>", priceId);
 
