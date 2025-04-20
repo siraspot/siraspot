@@ -20,7 +20,8 @@ export default function PremiumModal() {
   const [loading, setLoading] = React.useState(false);
   
   async function handlePremiumClick(priceId: string) {
-    console.log("price Id ==>", priceId);
+    
+    console.log("handlePremiumClick price Id ==>", priceId);
 
     try {
       setLoading(true);
