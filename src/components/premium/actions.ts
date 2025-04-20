@@ -12,17 +12,17 @@ export async function createCheckoutSession(priceId: string) {
   }
 
   console.log("User ==>\n", user);
-  
+
   console.log("createCheckoutSession price Id ==>", priceId);
 
   // priceId = "price_1RFHZWB4KAS5W7BrSTDrcVzL";
-  
+
   console.log("createCheckoutSession price Id ==>", priceId);
 
   const session = await stripe.checkout.sessions.create({
     line_items: [{ price: priceId, quantity: 1 }],
     mode: "subscription",
-    success_url: `${`http://localhost:3000`}/billing/success`,
+    success_url: `${env.NEXT_PUBLIC_BASE_URL}/billing/success`,
     cancel_url: `${env.NEXT_PUBLIC_BASE_URL}/billing`,
     customer_email: user.emailAddresses[0].emailAddress,
     subscription_data: {
