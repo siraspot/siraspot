@@ -2,7 +2,11 @@ import { env } from "@/env";
 import prisma from "@/lib/prisma";
 import { clerkClient } from "@clerk/nextjs/server";
 import { NextRequest } from "next/server";
-import stripe, { Stripe } from "stripe";
+import { Stripe } from "stripe";
+
+const stripe = new Stripe(env.STRIPE_SECRET_KEY, {
+  apiVersion: "2025-02-24.acacia",
+});
 
 export async function POST(req: NextRequest) {
   try {
@@ -36,8 +40,10 @@ export async function POST(req: NextRequest) {
         console.log(`Unhandled event type: ${event.type}`);
         break;
     }
+
+    return new Response("Webhook received", { status: 200 });
   } catch (error) {
-    console.error(error);
+    console.log(error);
     return new Response("Internal Server Error", { status: 500 });
   }
 }
