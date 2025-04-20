@@ -1,11 +1,11 @@
 "use client";
 
 import React from "react";
+import { env } from "@/env";
 import { Check } from "lucide-react";
 import { Button } from "../ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { createCheckoutSession } from "./actions";
-import { env } from "@/env";
 import usePremiumModal from "@/hooks/usePremiumModal";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "../ui/dialog";
 
